@@ -1,0 +1,239 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body{
+    background:#f5f7fa;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:rgba(11,31,58,0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar h1{
+    color:white;
+    font-size:32px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    transition:0.3s;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color:rgb(128, 34, 34);
+}
+
+/* =========================
+   TRAVEL TIPS SECTION
+========================= */
+
+.travel-tips{
+    padding: 90px 8%;
+    background: #f8f8f5;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2{
+    font-size: 3rem;
+    color: #0b3b73;
+    font-family: Georgia, serif;
+    margin-bottom: 12px;
+}
+
+.title-line{
+    width: 90px;
+    height: 5px;
+    margin: auto;
+    border-radius: 10px;
+    background: linear-gradient(to right, #f4a024, #2d8f5a);
+}
+
+/* GRID */
+
+.tips-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+/* CARD */
+
+.tip-card{
+    background: #f2f0e7;
+    padding: 35px 30px;
+    border-radius: 24px;
+    transition: 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.tip-card:hover{
+    transform: translateY(-8px);
+}
+
+/* ICON */
+
+.tip-card i{
+    font-size: 2.5rem;
+    color: #2d8f5a;
+    margin-bottom: 20px;
+}
+
+/* HEADING */
+
+.tip-card h3{
+    font-size: 1.8rem;
+    color: #0b3b73;
+    margin-bottom: 15px;
+    font-family: Georgia, serif;
+}
+
+/* TEXT */
+
+.tip-card p{
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px){
+
+    .travel-tips{
+        padding: 70px 5%;
+    }
+
+    .section-title h2{
+        font-size: 2.3rem;
+    }
+
+    .tips-container{
+        grid-template-columns: 1fr;
+    }
+
+    .tip-card{
+        padding: 30px 22px;
+    }
+
+    .tip-card h3{
+        font-size: 1.5rem;
+    }
+}
+
+/* Footer */
+.footer {
+    background:#0b1f3a;
+    color: #ddd;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.footer-col h3, .footer-col h4 {
+    color: #f4a024;
+    margin-bottom: 1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+    color: var(--saffron);
+    padding-left: 5px;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: var(--saffron);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #2d3e4a;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-text h2{
+        font-size:38px;
+    }
+
+    .hero-text p{
+        font-size:16px;
+        padding:0 20px;
+    }
+
+    .tip-card{
+        width:90%;
+    }
+
+}
