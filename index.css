@@ -16,6 +16,23 @@ header {
     width: 100%;
     z-index: 1000;
 }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+    transition:0.3s ease;
+}
+
+.logo img:hover{
+    transform:scale(1.08);
+}
 
 .container {
     width: 90%;
