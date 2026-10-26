@@ -1,0 +1,580 @@
+/* ============================================================
+   INCREDIBLE INDIA — SHARED STYLESHEET
+   Design tokens, base typography, header, footer, buttons,
+   skip link, focus styles, reveal/animation utilities.
+   Page-specific styles live in each page's own CSS file.
+   ============================================================ */
+
+/* ── 1. DESIGN TOKENS ───────────────────────────────────────── */
+:root {
+  /* Palette — warm saffron & deep indigo scheme */
+  --color-ivory:      #FDF6EC;
+  --color-forest:     #2C1654;   /* deep indigo-purple — header, footer, primary btns */
+  --color-saffron:    #F4A30E;   /* bright amber-gold — highlights, accents */
+  --color-terracotta: #D4522A;   /* burnt orange — eyebrows, accents */
+  --color-charcoal:   #1A1A2E;   /* near-black text */
+  --color-sage:       #F5EFE6;   /* warm parchment sections */
+  --color-white:      #ffffff;
+  --color-forest-mid: #3D2070;   /* slightly lighter indigo for hover */
+  --color-forest-dark:#1A0D3D;   /* darker indigo for active / footer strip */
+
+  /* Fonts */
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-med:  250ms ease;
+
+  /* Layout */
+  --max-width:        1200px;
+  --max-width-narrow: 760px;
+
+  /* Header height (used for scroll offset) */
+  --header-h: 72px;
+}
+
+/* ── 2. BASE RESET & GLOBAL ─────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-charcoal);
+  background: var(--color-ivory);
+  overflow-x: hidden;
+}
+
+img, svg, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ── 3. TYPOGRAPHY ──────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  color: var(--color-charcoal);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; }
+h2 { font-size: clamp(1.6rem, 4vw, 2.8rem); font-weight: 600; }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.8rem); font-weight: 600; }
+h4 { font-size: 1.1rem; font-weight: 600; }
+
+p { margin-bottom: var(--space-4); }
+p:last-child { margin-bottom: 0; }
+
+/* ── 4. LAYOUT HELPERS ──────────────────────────────────────── */
+.container {
+  width: min(var(--max-width), 100% - 2 * var(--space-5));
+  margin-inline: auto;
+}
+
+.container--narrow {
+  width: min(var(--max-width-narrow), 100% - 2 * var(--space-5));
+  margin-inline: auto;
+}
+
+/* ── 5. SKIP LINK ────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 9999;
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-saffron);
+  color: var(--color-charcoal);
+  font-family: var(--font-body);
+  font-weight: 700;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  text-decoration: none;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ── 6. FOCUS STYLES ────────────────────────────────────────── */
+:focus-visible {
+  outline: 3px solid var(--color-saffron);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Remove default outline only when :focus-visible is supported */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── 7. BUTTONS ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast),
+              transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-saffron);
+  outline-offset: 3px;
+}
+
+.btn--primary {
+  background: var(--color-forest);
+  color: var(--color-white);
+  border-color: var(--color-forest);
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background: var(--color-forest-mid);
+  border-color: var(--color-forest-mid);
+  transform: translateY(-1px);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+  background: var(--color-white);
+  color: var(--color-forest);
+  transform: translateY(-1px);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-forest);
+  border-color: var(--color-forest);
+}
+
+.btn--outline:hover,
+.btn--outline:focus-visible {
+  background: var(--color-forest);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+.btn--saffron {
+  background: var(--color-saffron);
+  color: var(--color-charcoal);
+  border-color: var(--color-saffron);
+}
+
+.btn--saffron:hover,
+.btn--saffron:focus-visible {
+  background: #d4881e;
+  border-color: #d4881e;
+  transform: translateY(-1px);
+}
+
+/* ── 8. HEADER ──────────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-forest);
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+/* Logo */
+.site-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.site-logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.nav-toggle__bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: transform var(--transition-med), opacity var(--transition-fast);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Primary nav */
+.primary-nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.primary-nav__list a {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  color: rgba(255,255,255,0.85);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.primary-nav__list a:hover,
+.primary-nav__list a:focus-visible {
+  color: var(--color-white);
+  background: rgba(255,255,255,0.12);
+}
+
+.primary-nav__list a[aria-current="page"] {
+  color: var(--color-saffron);
+  font-weight: 600;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Without JS: always show the list */
+  .primary-nav {
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    background: var(--color-forest-dark);
+    padding: var(--space-4);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+
+  .primary-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .primary-nav__list a {
+    padding: var(--space-3) var(--space-4);
+    font-size: 1rem;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .primary-nav__list li:last-child a {
+    border-bottom: none;
+  }
+
+  /* Under .js: collapse the menu; only open when .is-open */
+  .js .primary-nav {
+    display: none;
+  }
+
+  .js .primary-nav.is-open {
+    display: block;
+  }
+}
+
+/* ── 9. FOOTER ──────────────────────────────────────────────── */
+.site-footer {
+  background: var(--color-forest);
+  color: rgba(255,255,255,0.8);
+  padding-top: var(--space-8);
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-8);
+  align-items: start;
+  padding-bottom: var(--space-8);
+}
+
+.site-footer__brand img {
+  height: 44px;
+  width: auto;
+  margin-bottom: var(--space-4);
+}
+
+.site-footer__brand p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  max-width: 340px;
+}
+
+.site-footer__heading {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-saffron);
+  margin-bottom: var(--space-4);
+}
+
+.site-footer__links ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.site-footer__links a {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.site-footer__links a:hover,
+.site-footer__links a:focus-visible {
+  color: var(--color-saffron);
+  padding-left: var(--space-2);
+}
+
+.site-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: var(--space-4) 0;
+  text-align: center;
+}
+
+.site-footer__bottom p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+/* ── 10. SECTION TITLES (shared) ────────────────────────────── */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-7);
+}
+
+.section-header__eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: var(--space-3);
+}
+
+.section-header__title {
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-3);
+}
+
+.section-header__line {
+  width: 56px;
+  height: 3px;
+  background: var(--color-saffron);
+  border-radius: 3px;
+  margin: 0 auto;
+}
+
+/* ── 11. CARD GRID (shared) ──────────────────────────────────── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-6);
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform var(--transition-med), box-shadow var(--transition-med);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+.card__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.card__body {
+  padding: var(--space-5) var(--space-5) var(--space-6);
+}
+
+.card__title {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-3);
+}
+
+.card__text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: var(--space-4);
+  line-height: 1.65;
+}
+
+/* ── 12. REVEAL ANIMATIONS ──────────────────────────────────── */
+/* Content is VISIBLE by default (no-JS safe).
+   Under .js, we hide it until IntersectionObserver fires. */
+
+.reveal {
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays — applied via JS or cascade */
+.js .reveal:nth-child(2) { transition-delay: 0.08s; }
+.js .reveal:nth-child(3) { transition-delay: 0.16s; }
+.js .reveal:nth-child(4) { transition-delay: 0.24s; }
+.js .reveal:nth-child(5) { transition-delay: 0.32s; }
+.js .reveal:nth-child(6) { transition-delay: 0.40s; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ── 13. UTILITY ────────────────────────────────────────────── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-center { text-align: center; }
+.text-sage    { background: var(--color-sage); }
+
+/* Section spacing */
+.section {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+}
+
+.section--sage {
+  background: var(--color-sage);
+}
+
+.section--forest {
+  background: var(--color-forest);
+  color: var(--color-white);
+}
+
+.section--forest h2,
+.section--forest h3,
+.section--forest h4 {
+  color: var(--color-white);
+}

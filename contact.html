@@ -1,122 +1,136 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-   <link rel="stylesheet" href="contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Incredible India</title>
+    <meta name="description" content="Have questions or need travel advice? Get in touch with the Incredible India Travel Guide.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="contact.css">
 </head>
-
 <body>
 
-    <!-- Navbar -->
-    <header>
-
-        <div class="navbar">
-
-            <h1>Incredible India</h1>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="destination.html">Destinations</a></li>
-                    <li><a href="traveltip.html">Travel Tips</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
+<!-- Header -->
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <i class="fas fa-map-marked-alt logo-icon"></i>
+            <span class="logo-text">Incredible India</span>
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="traveltip.html">Travel Tips</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    </header>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="overlay">
+        <h2>Contact Us</h2>
+        <p>Have questions or need travel advice? Reach out to us!</p>
+    </div>
+</section>
 
-    <!-- Hero Section -->
-    <section class="hero">
+<!-- Contact Section -->
+<section class="contact-section">
 
-        <div class="overlay">
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h3>Send a Message</h3>
+        <form>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
-            <h2>Contact Us</h2>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-            <p>
-                Have questions or need travel advice?
-                Reach out to us!
-            </p>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?">
 
-        </div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Write your message here…" required></textarea>
 
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-
-        <!-- Contact Form -->
-        <div class="contact-form">
-
-            <h3>Send a Message</h3>
-
-            <form>
-
-                <input type="text"
-                placeholder="Enter Your Name">
-
-                <input type="email"
-                placeholder="Enter Your Email">
-
-                <textarea rows="6"
-                placeholder="Write Your Message"></textarea>
-
-                <button type="submit">
-                    Send Message
-                </button>
-
-            </form>
-
-        </div>
-
-        <!-- Contact Info -->
-        <div class="contact-info">
-
-            <h3>Get in Touch</h3>
-
-            <p>
-                📧 info@incredibleindiatravel.com
-            </p>
-
-            <div class="social-links">
-
-                <a href="#">Instagram</a>
-
-                <a href="#">Facebook</a>
-
-                <a href="#">Twitter</a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-  <div class="footer-container"><div class="footer-col"><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></div></div></div>
-        <div class="footer-social">
-
-            <a href="#">Instagram</a>
-
-            <a href="#">Facebook</a>
-
-            <a href="#">Twitter</a>
-
-            <a href="#">YouTube</a>
-
-        </div>
-        <div class="footer-bottom">© 2025 Incredible India Travel Guide. All rights reserved.</div>
-
+            <button type="submit">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </form>
     </div>
 
+    <!-- Contact Info -->
+    <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><i class="fas fa-envelope"></i> hello@incredibleindia.travel</p>
+        <p><i class="fas fa-globe"></i> India</p>
+        <p><i class="fas fa-clock"></i> Mon – Sat, 9am – 6pm IST</p>
+
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Incredible India Guide</h3>
+            <p>Explore the soul of India — culture, nature and adventure, one story at a time.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="traveltip.html">Travel Tips</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p><i class="fas fa-envelope"></i> hello@incredibleindia.travel</p>
+            <p><i class="fas fa-globe"></i> India</p>
+        </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Incredible India Travel Guide. All rights reserved.</p></div>
 </footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('main-nav');
+hamburger.addEventListener('click', function() {
+    const open = nav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+    hamburger.classList.toggle('active', open);
+});
+document.addEventListener('click', function(e) {
+    if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded','false');
+    }
+});
+</script>
 </body>
 </html>

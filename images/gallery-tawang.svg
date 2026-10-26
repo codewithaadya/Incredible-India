@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a3a"/>
+      <stop offset="100%" stop-color="#2a4a60"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g)"/>
+  <!-- Mountains backdrop -->
+  <polygon points="0,400 80,180 160,400" fill="rgba(100,130,160,0.5)"/>
+  <polygon points="120,400 300,100 480,400" fill="rgba(110,140,170,0.6)"/>
+  <polygon points="400,400 520,160 600,250 600,400" fill="rgba(100,130,160,0.5)"/>
+  <polygon points="300,100 280,135 320,135" fill="rgba(255,255,255,0.8)"/>
+  <!-- Monastery complex (Tawang style) -->
+  <!-- Main wall -->
+  <rect x="150" y="240" width="300" height="130" fill="rgba(210,190,150,0.85)"/>
+  <!-- Main building -->
+  <rect x="200" y="195" width="200" height="80" fill="rgba(220,200,160,0.9)"/>
+  <!-- Roof -->
+  <rect x="190" y="185" width="220" height="16" fill="rgba(180,60,30,0.85)"/>
+  <path d="M185 185 L300 165 L415 185 Z" fill="rgba(160,50,25,0.8)"/>
+  <!-- Windows -->
+  <g fill="rgba(100,60,20,0.7)">
+    <rect x="215" y="215" width="18" height="25"/><rect x="248" y="215" width="18" height="25"/>
+    <rect x="281" y="215" width="18" height="25"/><rect x="314" y="215" width="18" height="25"/>
+    <rect x="347" y="215" width="18" height="25"/>
+  </g>
+  <!-- Prayer flags line -->
+  <line x1="150" y1="240" x2="450" y2="240" stroke="rgba(255,255,255,0.35)" stroke-width="0.8"/>
+  <!-- Red stripe -->
+  <rect x="150" y="248" width="300" height="12" fill="rgba(180,50,30,0.6)"/>
+  <text x="300" y="367" text-anchor="middle"
+        font-family="Georgia, serif" font-size="16" font-weight="700"
+        letter-spacing="0.08em" fill="rgba(255,255,255,0.92)">TAWANG MONASTERY</text>
+  <text x="300" y="390" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="11" letter-spacing="0.12em"
+        fill="rgba(255,255,255,0.55)">ARUNACHAL PRADESH</text>
+</svg>

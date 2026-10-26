@@ -1,0 +1,30 @@
+{
+  "id": "FEAT-004",
+  "type": "feat",
+  "description": "Rewrite the Travel Tips page (traveltip.html + traveltip.css) onto the FEAT-001 foundation. Sections: best time to visit (with a semantic HTML <table> of months/regions), transport, etiquette, packing, food, safety, responsible tourism. Add a sticky table of contents on desktop (an <aside> of in-page anchors) that collapses gracefully on mobile. Fix the broken nav links (destinations.html → destination.html).",
+  "status": "pending",
+  "steps": [
+    "Rewrite c:/Users/aadyagupta/Incredible-India/traveltip.html. Replace <head> with the canonical head block (title 'Travel Tips — Incredible India', unique meta description, fonts, favicon, styles.css + traveltip.css, inline `.js` script). Add the skip link, canonical header (aria-current=\"page\" on Travel Tips), <main id=\"main\">, canonical footer, <script src=\"site.js\" defer></script>. Match the header/footer/logo byte-identically to the other pages.",
+    "Add one h1 (e.g. 'Travel Tips for India') and a short intro.",
+    "Build a two-column desktop layout: a sticky <aside class=\"toc\"> on the left (list of anchor links to #best-time, #transport, #etiquette, #packing, #food, #safety, #responsible-tourism) and the content <article> on the right. The TOC must be position:sticky on desktop and collapse to a normal stacked block (or a simple list) on mobile — never overflow horizontally.",
+    "Add section 'Best time to visit' (id=best-time) containing a semantic <table> with a <caption>, <thead> (months), and rows for regions (e.g. North India, South India, Himalayas, Coastal) with a short note per cell (accurate; no invented prices). The table must scroll horizontally within its container on very narrow screens (wrap in a div with overflow-x:auto) so the page itself never scrolls horizontally.",
+    "Add sections (each with an id and an <h2>): transport (#transport), etiquette (#etiquette), packing (#packing), food (#food), safety (#safety), responsible tourism (#responsible-tourism) — each a short, accurate paragraph or list (no invented facts).",
+    "Rewrite c:/Users/aadyagupta/Incredible-India/traveltip.css for page-specific layout only (two-column sticky-TOC layout, table styling, section spacing). Reuse tokens from styles.css. Provide a mobile breakpoint that stacks the TOC above the content and makes the table horizontally scrollable.",
+    "Remove all Font Awesome markup and the broken nav links (destinations.html → destination.html already handled by using the canonical header)."
+  ],
+  "acceptance_criteria": [
+    "traveltip.html has the canonical head (unique title + meta description, fonts, favicon, styles.css + traveltip.css, inline .js script), skip link, canonical header (aria-current on Travel Tips), <main id=\"main\">, canonical footer, site.js deferred — matching the other pages.",
+    "Seven sections exist with ids best-time, transport, etiquette, packing, food, safety, responsible-tourism.",
+    "A semantic <table> with <caption>, <thead>, and region rows exists under #best-time.",
+    "A sticky <aside class=\"toc\"> of anchor links to all seven sections exists and is sticky on desktop, stacked on mobile.",
+    "No Font Awesome link; no broken nav links.",
+    "traveltip.css contains only page-specific layout."
+  ],
+  "verification": [
+    "`python -m http.server 8000`; open http://localhost:8000/traveltip.html — TOC links scroll to each section; the TOC is sticky while scrolling on desktop.",
+    "At 360px width the TOC stacks above content and the table scrolls within its box (page has no horizontal overflow).",
+    "No 404s for traveltip.css; no external resources."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

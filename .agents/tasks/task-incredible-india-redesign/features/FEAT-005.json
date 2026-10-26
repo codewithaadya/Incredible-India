@@ -1,0 +1,34 @@
+{
+  "id": "FEAT-005",
+  "type": "feat",
+  "description": "Rewrite the Gallery page (gallery.html + gallery.css + gallery.js) onto the FEAT-001 foundation. FIX the missing closing </head>. Build a responsive editorial grid with category filters (region/theme) and an accessible lightbox (close button, Escape, arrow-key navigation, focus trap, focus restored to the triggering element). Progressive enhancement: without JS each image is wrapped in an anchor linking to the full photo so it still opens full-size. Create the local gallery images (no hotlinks).",
+  "status": "pending",
+  "steps": [
+    "Create local gallery images in c:/Users/aadyagupta/Incredible-India/images/ following the placeholder pattern, each tagged with a data-category for filtering. Use ~9-12 images across categories such as Himalayas, Beaches, Heritage, Wildlife, Festivals, Deserts (e.g. valley-of-flowers.svg [Himalayas], rann-of-kutch.svg [Deserts], loktak-lake.svg [Wildlife/Nature], tawang.svg [Heritage], dudhsagar.svg [Beaches/Nature], spiti.svg [Himalayas], plus a few more for filter variety). No external references.",
+    "Rewrite c:/Users/aadyagupta/Incredible-India/gallery.html. FIX the missing </head> (the current file jumps straight to <body>). Replace <head> with the canonical head block (title 'Gallery — Incredible India', unique meta description, fonts, favicon, styles.css + gallery.css, inline `.js` script). Add the skip link, canonical header (aria-current=\"page\" on Gallery), <main id=\"main\">, canonical footer, <script src=\"site.js\" defer></script> then <script src=\"gallery.js\" defer></script>. Match the header/footer/logo byte-identically to the other pages.",
+    "Add a filter toolbar: a group of <button data-filter=\"all|Himalayas|Beaches|Heritage|Wildlife|Festivals|Deserts\"> with the 'All' button having aria-pressed=\"true\" initially. (No-JS fallback: if JS is off the buttons do nothing and all images show — that is acceptable.)",
+    "Build the grid of gallery items. Each item is an <a class=\"gallery-card\" href=\"images/<name>.svg\" data-category=\"<cat>\"> wrapping an <img> (width/height/loading='lazy'/alt) and a caption (h3 + short p). Without JS the anchor opens the full photo in a new tab (add target=\"_blank\" rel=\"noopener\" so it is usable without JS); gallery.js will preventDefault and open the lightbox instead.",
+    "Add a hidden lightbox container in the markup: `<div id=\"lightbox\" class=\"lightbox\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Image viewer\" hidden><button class=\"lightbox__close\" type=\"button\" aria-label=\"Close\">×</button><button class=\"lightbox__prev\" type=\"button\" aria-label=\"Previous\">‹</button><img class=\"lightbox__img\" alt=\"\"><button class=\"lightbox__next\" type=\"button\" aria-label=\"Next\">›</button><p class=\"lightbox__caption\"></p></div>`.",
+    "Create c:/Users/aadyagupta/Incredible-India/gallery.js (vanilla, defer-safe). (a) Filter: on click of a filter button, set aria-pressed on the active button, and toggle each `.gallery-card` visibility by matching its data-category (use the `hidden` attribute or a class; 'all' shows every card). (b) Lightbox: on click of a `.gallery-card` (anchor), preventDefault, open the lightbox (remove `hidden`, set the img src to the anchor's href, set the caption, store the triggering element for focus restore, move focus to the close button). Trap focus within the dialog (keep focus inside #lightbox while open). Provide prev/next (cycle through currently visible cards), close (close button, Escape, backdrop click), and arrow-key navigation (ArrowLeft/ArrowRight). On close: restore focus to the triggering card, add `hidden`. (c) Respect prefers-reduced-motion (no transition animation on open if reduced). Guard so opening is a no-op if already open.",
+    "Rewrite c:/Users/aadyagupta/Incredible-India/gallery.css for page-specific layout only (filter toolbar, responsive grid auto-fit minmax 260px 1fr, card hover/zoom, lightbox overlay + centered image + controls). Reuse tokens from styles.css. Ensure no horizontal overflow 360px–1920px and the lightbox image fits the viewport (max-height:90vh, max-width:90vw).",
+    "Remove all Font Awesome markup and every hotlinked gallery image (hellohikes, digitaloceanspaces, wp/histravelinstincts, scene7, ftcdn, outlooktraveller)."
+  ],
+  "acceptance_criteria": [
+    "gallery.html has a properly closed <head> and the canonical head block (unique title + meta description, fonts, favicon, styles.css + gallery.css, inline .js script), skip link, canonical header (aria-current on Gallery), <main id=\"main\">, canonical footer, site.js + gallery.js deferred — matching the other pages.",
+    "A filter toolbar exists with data-filter buttons; clicking a filter shows only matching cards (and 'All' shows all).",
+    "The lightbox opens on card click (JS), has role='dialog' aria-modal='true' aria-label, a close button, prev/next buttons; closes on close button, Escape, and backdrop click; supports ArrowLeft/ArrowRight; traps focus while open; and restores focus to the triggering card on close.",
+    "Without JS, each gallery card is an anchor that opens the full photo (target=\"_blank\" rel=\"noopener\").",
+    "All images are local SVGs; no hotlinks; every <img> has width/height/loading='lazy'/alt.",
+    "`node --check c:/Users/aadyagupta/Incredible-India/gallery.js` passes (exit 0).",
+    "No Font Awesome link; no horizontal overflow 360px–1920px."
+  ],
+  "verification": [
+    "`node --check c:/Users/aadyagupta/Incredible-India/gallery.js` exits 0.",
+    "`python -m http.server 8000`; open http://localhost:8000/gallery.html — filter buttons change the visible cards; clicking a card opens the lightbox; close (button + Escape + backdrop) and prev/next (buttons + arrow keys) work; Tab focus stays inside the lightbox; focus returns to the card on close.",
+    "Disable JS — each card is an anchor that opens the full photo in a new tab.",
+    "No 404s for gallery.css, gallery.js, or any image; no external image URLs remain.",
+    "Resize 360px–1920px — no horizontal overflow; lightbox image fits the viewport."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

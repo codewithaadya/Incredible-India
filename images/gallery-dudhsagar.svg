@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a20"/>
+      <stop offset="100%" stop-color="#2a5a30"/>
+    </linearGradient>
+    <linearGradient id="fall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.9)"/>
+      <stop offset="100%" stop-color="rgba(200,230,250,0.5)"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g)"/>
+  <!-- Forest -->
+  <g fill="rgba(20,80,35,0.8)">
+    <polygon points="0,400 50,200 100,400"/>
+    <polygon points="80,400 130,220 180,400"/>
+    <polygon points="420,400 470,215 520,400"/>
+    <polygon points="490,400 545,205 600,350 600,400"/>
+  </g>
+  <!-- Cliff face -->
+  <rect x="220" y="0" width="160" height="320" fill="rgba(80,70,60,0.7)"/>
+  <!-- Waterfall tiers -->
+  <rect x="255" y="0" width="90" height="100" fill="url(#fall)" opacity="0.85"/>
+  <ellipse cx="300" cy="100" rx="55" ry="15" fill="rgba(200,230,250,0.6)"/>
+  <rect x="260" y="115" width="80" height="80" fill="url(#fall)" opacity="0.8"/>
+  <ellipse cx="300" cy="195" rx="50" ry="13" fill="rgba(200,230,250,0.6)"/>
+  <rect x="263" y="208" width="74" height="80" fill="url(#fall)" opacity="0.75"/>
+  <ellipse cx="300" cy="288" rx="55" ry="16" fill="rgba(200,230,250,0.6)"/>
+  <!-- Pool at base -->
+  <ellipse cx="300" cy="320" rx="90" ry="30" fill="rgba(100,180,210,0.55)"/>
+  <text x="300" y="380" text-anchor="middle"
+        font-family="Georgia, serif" font-size="18" font-weight="700"
+        letter-spacing="0.08em" fill="rgba(255,255,255,0.92)">DUDHSAGAR FALLS</text>
+  <text x="300" y="398" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="11" letter-spacing="0.12em"
+        fill="rgba(255,255,255,0.55)">GOA — KARNATAKA BORDER</text>
+</svg>

@@ -1,129 +1,381 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Tips - Incredible India</title>
-
-    <link rel="stylesheet" href="traveltip.css">
+    <title>Travel Tips — Incredible India</title>
+    <meta name="description" content="Essential travel tips for India — best seasons, packing, budget, safety, culture, transport, food, solo travel and photography advice.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="traveltip.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <div class="navbar">
-
-            <h1>Incredible India</h1>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="destinations.html">Destinations</a></li>
-                    <li><a href="traveltip.html">Travel Tips</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
+<!-- ── HEADER ─────────────────────────────────── -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <i class="fas fa-map-marked-alt logo-icon"></i>
+            <span class="logo-text">Incredible India</span>
         </div>
-    </header>
-
-   <!-- TRAVEL TIPS SECTION -->
-
-<section class="travel-tips">
-
-    <div class="section-title">
-        <h2>Travel Tips</h2>
-        <div class="title-line"></div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="traveltip.html" class="active">Travel Tips</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
 
-    <div class="tips-container">
-
-        <div class="tip-card">
-            <i class="fas fa-suitcase"></i>
-            <h3>Packing Essentials</h3>
-            <p>
-                Carry light cotton clothes, sunscreen,
-                power bank, first aid kit and comfortable shoes.
-            </p>
-        </div>
-
-        <div class="tip-card">
-            <i class="fas fa-indian-rupee-sign"></i>
-            <h3>Budget Travel</h3>
-            <p>
-                Use trains, local transport and book tickets
-                early to save money during your trip.
-            </p>
-        </div>
-
-        <div class="tip-card">
-            <i class="fas fa-shield-heart"></i>
-            <h3>Safety Tips</h3>
-            <p>
-                Keep valuables secure, follow local customs
-                and always carry bottled water.
-            </p>
-        </div>
-
-        <div class="tip-card">
-            <i class="fas fa-hands-praying"></i>
-            <h3>Cultural Etiquette</h3>
-            <p>
-                Respect traditions, remove shoes at temples
-                and dress modestly at sacred places.
-            </p>
-        </div>
-
-        <div class="tip-card">
-            <i class="fas fa-bus"></i>
-            <h3>Transportation</h3>
-            <p>
-                Travel using metro, buses and trains.
-                Auto-rickshaws are useful for short rides.
-            </p>
-        </div>
-
-        <div class="tip-card">
-            <i class="fas fa-cloud-sun"></i>
-            <h3>Best Seasons</h3>
-            <p>
-                October to March is ideal for exploring
-                most destinations across India.
-            </p>
-        </div>
-
-        <div class="tip-card">
-            <i class="fas fa-user-group"></i>
-            <h3>Solo Travel</h3>
-            <p>
-                Kerala, Himachal and Pondicherry are
-                popular and safe destinations for solo trips.
-            </p>
-        </div>
-
-        <div class="tip-card">
-            <i class="fas fa-camera"></i>
-            <h3>Photography Tips</h3>
-            <p>
-                Capture sunrise and sunset views,
-                local culture and colorful street life.
-            </p>
-        </div>
-
+<!-- ── HERO ───────────────────────────────────── -->
+<section class="tips-hero">
+    <div class="tips-hero__overlay"></div>
+    <div class="tips-hero__content">
+        <span class="eyebrow"><i class="fas fa-compass"></i> Smart Traveller's Guide</span>
+        <h1>Travel India With Confidence</h1>
+        <p>From the right season to pack for to navigating a 4 a.m. railway station — everything you need to plan, pack and travel smart across the subcontinent.</p>
     </div>
-
 </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-col"><h3>Incredible India</h3><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div>
-    <div class="footer-col"><h4>Resources</h4><ul><li><a href="#">Travel Blog</a></li><li><a href="#">FAQs</a></li></ul></div>
-  </div>
-  <div class="footer-bottom">© 2025 Incredible India Travel Guide. All rights reserved.</div>
+<!-- ── QUICK-JUMP NAV ──────────────────────────── -->
+<nav class="tips-jump-nav" aria-label="Jump to travel tip">
+    <a href="#best-time">Best Time</a>
+    <a href="#packing">Packing</a>
+    <a href="#budget">Budget</a>
+    <a href="#safety">Safety</a>
+    <a href="#culture">Culture</a>
+    <a href="#transport">Transport</a>
+    <a href="#food">Food &amp; Water</a>
+    <a href="#solo">Solo Travel</a>
+    <a href="#photography">Photography</a>
+</nav>
+
+<!-- ── MAIN ──────────────────────────────────── -->
+<main class="tips-main">
+
+    <!-- ── BEST TIME TO VISIT TABLE ───────────── -->
+    <section class="tips-table-section" id="best-time">
+        <div class="tips-section-head">
+            <span class="tips-section-eyebrow">Plan Around the Seasons</span>
+            <h2>Best Time to Visit, by Region</h2>
+            <p>India's climate shifts dramatically from north to south. This seasonal guide helps you time each region for the best experience.</p>
+        </div>
+
+        <div class="tips-table-wrap">
+            <table class="tips-table">
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Peak Season</th>
+                        <th>Shoulder</th>
+                        <th>Avoid</th>
+                        <th>Why</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rajasthan &amp; Delhi</td>
+                        <td>Oct – Mar</td>
+                        <td>Sep, Apr</td>
+                        <td>May – Jul (40–48 °C)</td>
+                        <td>Walkable cities, desert nights cool</td>
+                    </tr>
+                    <tr>
+                        <td>Kerala &amp; South</td>
+                        <td>Sep – Mar</td>
+                        <td>Aug</td>
+                        <td>Jun – Jul (monsoon)</td>
+                        <td>Calm backwaters, lush hills</td>
+                    </tr>
+                    <tr>
+                        <td>Goa</td>
+                        <td>Nov – Feb</td>
+                        <td>Oct, Mar</td>
+                        <td>Jun – Sep (monsoon)</td>
+                        <td>Beach shacks open, festivals</td>
+                    </tr>
+                    <tr>
+                        <td>Himachal Pradesh</td>
+                        <td>Mar – Jun, Sep – Nov</td>
+                        <td>Dec – Feb</td>
+                        <td>Jul – Aug (landslides)</td>
+                        <td>Trekking, snow, clear passes</td>
+                    </tr>
+                    <tr>
+                        <td>Uttarakhand</td>
+                        <td>Apr – Jun, Sep – Oct</td>
+                        <td>Mar, Nov</td>
+                        <td>Jul – Aug (landslides)</td>
+                        <td>Valley of Flowers blooms Jul–Aug</td>
+                    </tr>
+                    <tr>
+                        <td>Leh-Ladakh</td>
+                        <td>May – Sep</td>
+                        <td>—</td>
+                        <td>Nov – Apr (passes closed)</td>
+                        <td>Only window roads are open</td>
+                    </tr>
+                    <tr>
+                        <td>Andaman &amp; Nicobar</td>
+                        <td>Oct – May</td>
+                        <td>—</td>
+                        <td>Jun – Sep (rough seas)</td>
+                        <td>Best diving visibility Dec–Apr</td>
+                    </tr>
+                    <tr>
+                        <td>Varanasi &amp; plains</td>
+                        <td>Oct – Mar</td>
+                        <td>Sep</td>
+                        <td>May – Jun (very hot)</td>
+                        <td>Dev Deepawali in November</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ── TIP CARDS ──────────────────────────── -->
+    <section class="tips-cards-section">
+        <div class="tips-section-head">
+            <span class="tips-section-eyebrow">Practical Advice</span>
+            <h2>8 Essential Travel Tips</h2>
+            <p>Hard-won advice from frequent India travellers — read it before you pack.</p>
+        </div>
+
+        <div class="tips-grid">
+
+            <!-- 01 Packing -->
+            <article class="tip-card" id="packing">
+                <div class="tip-card__top">
+                    <span class="tip-card__num">01</span>
+                    <div class="tip-card__icon"><i class="fas fa-suitcase"></i></div>
+                </div>
+                <h3>Packing Essentials</h3>
+                <p>India rewards light, breathable packing. Layer for AC trains and hill stations, and remember that laundry is cheap and everywhere. Leave room — you'll want to buy textiles, spices and handicrafts.</p>
+                <div class="tip-card__quick">
+                    <span class="quick-label">Quick tips</span>
+                    <ul>
+                        <li>Light cottons + one warm layer for AC and hills</li>
+                        <li>Modest scarf for temples (covers shoulders/head)</li>
+                        <li>High-SPF sunscreen, hat, sunglasses</li>
+                        <li>Power bank &amp; universal adapter (Type C/D/M)</li>
+                        <li>Comfortable slip-off shoes (you'll remove them often)</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 02 Budget -->
+            <article class="tip-card" id="budget">
+                <div class="tip-card__top">
+                    <span class="tip-card__num">02</span>
+                    <div class="tip-card__icon"><i class="fas fa-indian-rupee-sign"></i></div>
+                </div>
+                <h3>Budget Travel</h3>
+                <p>India is one of the world's most rewarding budget destinations. The same daily spend can buy a dorm bed or a heritage-suite splurge — it all depends on how you mix trains, homestays and street food.</p>
+                <div class="tip-card__quick">
+                    <span class="quick-label">Quick tips</span>
+                    <ul>
+                        <li>Book trains on IRCTC 60+ days ahead; Tatkal opens at 10 a.m.</li>
+                        <li>Night sleeper trains save a hotel night</li>
+                        <li>Eat where locals queue — high turnover = fresh food</li>
+                        <li>SIM card: Airtel/Jio at any airport counter</li>
+                        <li>Bargain in markets, never in fixed-price shops</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 03 Safety -->
+            <article class="tip-card" id="safety">
+                <div class="tip-card__top">
+                    <span class="tip-card__num">03</span>
+                    <div class="tip-card__icon"><i class="fas fa-shield-heart"></i></div>
+                </div>
+                <h3>Health &amp; Safety</h3>
+                <p>India is overwhelmingly safe for prepared travellers. The two things that catch most people out are Delhi-belly and dehydration — both easy to prevent with a few habits.</p>
+                <div class="tip-card__quick">
+                    <span class="quick-label">Quick tips</span>
+                    <ul>
+                        <li>Drink only sealed bottled or filtered water — no ice</li>
+                        <li>Carry ORS sachets; rehydrate before you feel thirsty</li>
+                        <li>Keep digital + paper copies of passport &amp; visa</li>
+                        <li>Use hotel safes; carry a small padlock for trains</li>
+                        <li>Emergency numbers: Police 100, Ambulance 102</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 04 Culture -->
+            <article class="tip-card" id="culture">
+                <div class="tip-card__top">
+                    <span class="tip-card__num">04</span>
+                    <div class="tip-card__icon"><i class="fas fa-hands-praying"></i></div>
+                </div>
+                <h3>Cultural Etiquette</h3>
+                <p>India's social codes are layered but warm — a little effort goes a long way. The head wobble means "yes, okay, I understand", and "namaste" with pressed palms works everywhere.</p>
+                <div class="tip-card__quick">
+                    <span class="quick-label">Quick tips</span>
+                    <ul>
+                        <li>Remove shoes before temples, mosques and homes</li>
+                        <li>Dress modestly at sacred sites — cover knees &amp; shoulders</li>
+                        <li>Use your right hand for eating, giving and receiving</li>
+                        <li>Ask before photographing people or rituals</li>
+                        <li>Don't point with your feet or touch someone's head</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 05 Transport -->
+            <article class="tip-card" id="transport">
+                <div class="tip-card__top">
+                    <span class="tip-card__num">05</span>
+                    <div class="tip-card__icon"><i class="fas fa-bus"></i></div>
+                </div>
+                <h3>Getting Around</h3>
+                <p>India's transport is vast, varied and an experience in itself. The trick is matching the mode to the distance — metros for cities, trains for regions, flights for cross-country jumps.</p>
+                <div class="tip-card__quick">
+                    <span class="quick-label">Quick tips</span>
+                    <ul>
+                        <li>Metro rail in Delhi/Mumbai/Bengaluru/Hyderabad/Chennai</li>
+                        <li>Auto-rickshaws: insist on the meter or fix the fare first</li>
+                        <li>Ola &amp; Uber work reliably in major cities</li>
+                        <li>Overnight Volvo buses beat mountain driving</li>
+                        <li>Domestic flights (IndiGo) are cheap when booked early</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 06 Food -->
+            <article class="tip-card" id="food">
+                <div class="tip-card__top">
+                    <span class="tip-card__num">06</span>
+                    <div class="tip-card__icon"><i class="fas fa-utensils"></i></div>
+                </div>
+                <h3>Food &amp; Water</h3>
+                <p>Indian street food is some of the best on earth — and safe when you follow a few simple rules. "Less spicy" (<em>kam mirchi</em>) is a phrase worth knowing; raita and lassi are natural coolers.</p>
+                <div class="tip-card__quick">
+                    <span class="quick-label">Quick tips</span>
+                    <ul>
+                        <li>Choose busy stalls — high turnover means fresh food</li>
+                        <li>Fried &gt; raw: avoid pre-cut fruit from unknown vendors</li>
+                        <li>Vegetarians: look for "pure veg" restaurants (green sign)</li>
+                        <li>Carry a SteriPen or LifeStraw for remote areas</li>
+                        <li>Try thalis — a complete regional meal on one tray</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 07 Solo -->
+            <article class="tip-card" id="solo">
+                <div class="tip-card__top">
+                    <span class="tip-card__num">07</span>
+                    <div class="tip-card__icon"><i class="fas fa-user-group"></i></div>
+                </div>
+                <h3>Solo Travel</h3>
+                <p>Solo travel in India is rewarding and increasingly common. Solo women travellers should research area-specific advice and prefer homestays and women-only dorms where available.</p>
+                <div class="tip-card__quick">
+                    <span class="quick-label">Quick tips</span>
+                    <ul>
+                        <li>Safe picks: Kerala, Himachal, Pondicherry, Rishikesh</li>
+                        <li>Share your live location with someone back home</li>
+                        <li>Join day-tour groups to meet other travellers</li>
+                        <li>Avoid unlit lanes after dark in smaller towns</li>
+                        <li>Trust your instincts — say no firmly to touts</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 08 Photography -->
+            <article class="tip-card" id="photography">
+                <div class="tip-card__top">
+                    <span class="tip-card__num">08</span>
+                    <div class="tip-card__icon"><i class="fas fa-camera"></i></div>
+                </div>
+                <h3>Photography Tips</h3>
+                <p>India is a photographer's dream — but a few courtesies matter. Golden hour at the ghats, blue hour at the forts, and the chaos of a bazaar all reward patience over speed.</p>
+                <div class="tip-card__quick">
+                    <span class="quick-label">Quick tips</span>
+                    <ul>
+                        <li>Always ask before photographing people or rituals</li>
+                        <li>Some temples ban cameras inside the sanctum</li>
+                        <li>Golden hour (6–8 a.m., 5–6 p.m.) is magical</li>
+                        <li>Carry extra SD cards — you'll shoot more than expected</li>
+                        <li>Drone use requires a DGCA permit — check first</li>
+                    </ul>
+                </div>
+            </article>
+
+        </div><!-- /.tips-grid -->
+    </section>
+
+    <!-- ── DID YOU KNOW CALLOUT ──────────────── -->
+    <section class="did-you-know">
+        <div class="dyk-inner">
+            <div class="dyk-icon"><i class="fas fa-lightbulb"></i></div>
+            <div class="dyk-text">
+                <h3>Did You Know?</h3>
+                <p>India spans <strong>29 states, 7 union territories and 22 official languages</strong> — yet you can travel almost everywhere with English alone. The rupee symbol ₹ was adopted in 2010, and ₹100 buys a hearty street meal in most cities.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────── -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Incredible India Guide</h3>
+            <p>Explore the soul of India — culture, nature and adventure, one story at a time.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="traveltip.html">Travel Tips</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Incredible India Travel Guide. All rights reserved.</p></div>
 </footer>
 
+<script>
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('main-nav');
+hamburger.addEventListener('click', function() {
+    const open = nav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+    hamburger.classList.toggle('active', open);
+});
+document.addEventListener('click', function(e) {
+    if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded','false');
+    }
+});
+</script>
 </body>
 </html>

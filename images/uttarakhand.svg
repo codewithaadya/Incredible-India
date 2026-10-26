@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2030"/>
+      <stop offset="60%" stop-color="#183D32"/>
+      <stop offset="100%" stop-color="#2a6040"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g)"/>
+  <!-- River Ganga -->
+  <path d="M0 340 Q100 315 200 330 Q300 345 400 320 Q500 305 600 325 L600 400 L0 400 Z"
+        fill="rgba(100,180,220,0.45)"/>
+  <!-- Ghats (stepped) -->
+  <rect x="180" y="300" width="240" height="15" fill="rgba(200,170,120,0.7)"/>
+  <rect x="160" y="315" width="280" height="15" fill="rgba(190,160,110,0.75)"/>
+  <rect x="140" y="330" width="320" height="15" fill="rgba(180,150,100,0.8)"/>
+  <!-- Temple silhouette -->
+  <polygon points="300,180 285,290 315,290" fill="rgba(180,100,50,0.9)"/>
+  <polygon points="280,240 260,290 300,290" fill="rgba(160,85,40,0.85)"/>
+  <polygon points="320,240 300,290 340,290" fill="rgba(160,85,40,0.85)"/>
+  <rect x="255" y="290" width="90" height="15" fill="rgba(140,70,30,0.9)"/>
+  <!-- Flame of aarti -->
+  <ellipse cx="300" cy="175" rx="7" ry="12" fill="#E89B3C" opacity="0.8"/>
+  <ellipse cx="300" cy="172" rx="4" ry="8" fill="#FAF7F0" opacity="0.6"/>
+  <text x="300" y="365" text-anchor="middle"
+        font-family="Georgia, serif" font-size="22" font-weight="700"
+        letter-spacing="0.1em" fill="rgba(255,255,255,0.95)">UTTARAKHAND</text>
+  <text x="300" y="390" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="12" letter-spacing="0.15em"
+        fill="rgba(255,255,255,0.6)">DEVBHOOMI</text>
+</svg>

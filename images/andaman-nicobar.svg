@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#006080"/>
+      <stop offset="100%" stop-color="#003050"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#sea)"/>
+  <!-- Turquoise shallow water -->
+  <ellipse cx="300" cy="350" rx="260" ry="60" fill="rgba(0,180,160,0.35)"/>
+  <!-- Sandy beach -->
+  <path d="M0 330 Q150 310 300 318 Q450 325 600 312 L600 360 L0 360 Z" fill="rgba(220,195,140,0.75)"/>
+  <!-- Tropical island hill -->
+  <ellipse cx="300" cy="290" rx="160" ry="70" fill="rgba(20,100,50,0.8)"/>
+  <!-- Coral underwater hint -->
+  <g fill="rgba(200,80,60,0.35)">
+    <ellipse cx="150" cy="370" rx="25" ry="10"/>
+    <ellipse cx="460" cy="375" rx="20" ry="8"/>
+    <ellipse cx="350" cy="380" rx="30" ry="9"/>
+  </g>
+  <!-- Palm tree -->
+  <line x1="300" y1="370" x2="295" y2="230" stroke="rgba(80,50,15,0.9)" stroke-width="8"/>
+  <path d="M295 230 Q268 210 248 220 Q268 226 295 230" fill="rgba(25,90,35,0.9)"/>
+  <path d="M295 235 Q322 210 345 220 Q322 232 295 235" fill="rgba(25,90,35,0.9)"/>
+  <path d="M295 238 Q266 225 262 245 Q279 236 295 238" fill="rgba(25,90,35,0.9)"/>
+  <!-- Sun -->
+  <circle cx="490" cy="90" r="35" fill="#E89B3C" opacity="0.7"/>
+  <text x="300" y="355" text-anchor="middle"
+        font-family="Georgia, serif" font-size="18" font-weight="700"
+        letter-spacing="0.08em" fill="rgba(255,255,255,0.95)">ANDAMAN &amp; NICOBAR</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#183D32"/>
+      <stop offset="100%" stop-color="#1a5040"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g)"/>
+  <!-- Sky reflection -->
+  <rect width="600" height="220" fill="rgba(100,160,200,0.3)"/>
+  <!-- Lake water -->
+  <rect x="0" y="180" width="600" height="220" fill="rgba(30,90,120,0.6)"/>
+  <!-- Floating phumdis (reed islands) -->
+  <ellipse cx="150" cy="270" rx="80" ry="22" fill="rgba(60,120,50,0.85)"/>
+  <ellipse cx="340" cy="300" rx="100" ry="25" fill="rgba(55,115,45,0.85)"/>
+  <ellipse cx="500" cy="260" rx="70" ry="18" fill="rgba(65,125,52,0.85)"/>
+  <ellipse cx="80" cy="330" rx="55" ry="15" fill="rgba(50,110,40,0.8)"/>
+  <ellipse cx="460" cy="340" rx="65" ry="17" fill="rgba(55,115,45,0.8)"/>
+  <!-- Reed grass on islands -->
+  <g stroke="rgba(80,150,60,0.7)" stroke-width="1.5">
+    <line x1="120" y1="270" x2="115" y2="252"/><line x1="140" y1="265" x2="138" y2="247"/>
+    <line x1="160" y1="268" x2="158" y2="250"/><line x1="180" y1="272" x2="178" y2="254"/>
+    <line x1="310" y1="300" x2="308" y2="280"/><line x1="335" y1="295" x2="333" y2="275"/>
+    <line x1="360" y1="298" x2="358" y2="278"/>
+  </g>
+  <!-- Water ripples -->
+  <g stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none">
+    <ellipse cx="300" cy="370" rx="150" ry="18"/>
+    <ellipse cx="100" cy="355" rx="80" ry="12"/>
+  </g>
+  <!-- Hills backdrop -->
+  <path d="M0 180 Q100 140 200 160 Q320 180 440 145 Q540 120 600 150 L600 180 L0 180 Z"
+        fill="rgba(30,80,50,0.5)"/>
+  <text x="300" y="380" text-anchor="middle"
+        font-family="Georgia, serif" font-size="18" font-weight="700"
+        letter-spacing="0.08em" fill="rgba(255,255,255,0.9)">LOKTAK LAKE</text>
+  <text x="300" y="398" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="11" letter-spacing="0.12em"
+        fill="rgba(255,255,255,0.55)">MANIPUR</text>
+</svg>

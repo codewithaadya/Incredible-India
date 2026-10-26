@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1a08"/>
+      <stop offset="100%" stop-color="#1a3028"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g)"/>
+  <!-- Illuminated palace silhouette -->
+  <!-- Main body -->
+  <rect x="80" y="240" width="440" height="130" fill="rgba(170,120,50,0.6)"/>
+  <!-- Central dome -->
+  <ellipse cx="300" cy="235" rx="50" ry="35" fill="rgba(200,150,60,0.7)"/>
+  <polygon points="300,200 280,238 320,238" fill="rgba(220,170,70,0.75)"/>
+  <!-- Side towers -->
+  <rect x="80" y="200" width="50" height="80" fill="rgba(160,110,45,0.65)"/>
+  <polygon points="105,195 85,205 125,205" fill="rgba(200,150,60,0.7)"/>
+  <rect x="470" y="200" width="50" height="80" fill="rgba(160,110,45,0.65)"/>
+  <polygon points="495,195 475,205 515,205" fill="rgba(200,150,60,0.7)"/>
+  <!-- Arched colonnade -->
+  <g fill="none" stroke="rgba(232,155,60,0.4)" stroke-width="2">
+    <path d="M120 280 Q140 260 160 280"/><path d="M170 280 Q190 260 210 280"/>
+    <path d="M220 280 Q240 260 260 280"/><path d="M270 280 Q290 260 310 280"/>
+    <path d="M320 280 Q340 260 360 280"/><path d="M370 280 Q390 260 410 280"/>
+    <path d="M420 280 Q440 260 460 280"/>
+  </g>
+  <!-- Light dots (illumination) -->
+  <g fill="#E89B3C" opacity="0.7">
+    <circle cx="100" cy="200" r="2.5"/><circle cx="150" cy="195" r="2.5"/><circle cx="200" cy="240" r="2.5"/>
+    <circle cx="250" cy="240" r="2.5"/><circle cx="300" cy="198" r="3"/><circle cx="350" cy="240" r="2.5"/>
+    <circle cx="400" cy="240" r="2.5"/><circle cx="450" cy="195" r="2.5"/><circle cx="500" cy="200" r="2.5"/>
+  </g>
+  <!-- Stars -->
+  <g fill="rgba(255,255,255,0.45)">
+    <circle cx="50" cy="50" r="1.2"/><circle cx="180" cy="30" r="1"/><circle cx="400" cy="45" r="1.3"/>
+    <circle cx="560" cy="60" r="1"/>
+  </g>
+  <text x="300" y="360" text-anchor="middle"
+        font-family="Georgia, serif" font-size="22" font-weight="700"
+        letter-spacing="0.1em" fill="rgba(255,255,255,0.95)">MYSORE</text>
+  <text x="300" y="386" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="12" letter-spacing="0.15em"
+        fill="rgba(255,255,255,0.6)">CITY OF PALACES</text>
+</svg>

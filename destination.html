@@ -1,23 +1,32 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Destinations</title>
-    <link rel="stylesheet" href="destination.css">
+    <title>Indian Destinations — Incredible India</title>
+    <meta name="description" content="Explore India's most iconic destinations — from the royal forts of Rajasthan to the backwaters of Kerala, the Himalayas and beyond.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="destination.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
+<!-- ── HEADER ─────────────────────────────────── -->
+<header>
     <div class="container">
-        <h1>Incredible India</h1>
-        <nav>
+        <div class="logo">
+            <i class="fas fa-map-marked-alt logo-icon"></i>
+            <span class="logo-text">Incredible India</span>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="destination.html" class="active">Destinations</a></li>
                 <li><a href="traveltip.html">Travel Tips</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -26,176 +35,325 @@
     </div>
 </header>
 
-
-    <section class="destination-intro">
-    <div class="intro-content">
+<!-- ── HERO ───────────────────────────────────── -->
+<section class="dest-hero">
+    <div class="dest-hero__overlay"></div>
+    <div class="dest-hero__content">
+        <span class="eyebrow"><i class="fas fa-compass"></i> 7 Destinations</span>
         <h1>Explore the Heart of India</h1>
-        <div class="title-line"></div>
-        <p class="intro-text">
-            "Explore top Indian travel destinations with must-visit places, local tips, and cultural experiences!"
-        </p>
+        <p>From the sand-gold forts of Rajasthan to the emerald backwaters of Kerala — every corner of India is a story waiting to be lived.</p>
     </div>
 </section>
 
-    <!-- Destination Cards -->
-    <section class="destination-container">
+<!-- ── QUICK-JUMP LINKS ────────────────────────── -->
+<nav class="jump-nav" aria-label="Jump to destination">
+    <a href="#jaipur">Jaipur</a>
+    <a href="#goa">Goa</a>
+    <a href="#varanasi">Varanasi</a>
+    <a href="#kerala">Kerala</a>
+    <a href="#rishikesh">Rishikesh</a>
+    <a href="#ladakh">Leh-Ladakh</a>
+    <a href="#andaman">Andaman</a>
+</nav>
 
-        <!-- Jaipur -->
-        <div class="card">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/c4/72/f6/jal-mahal-jaipur-tour.jpg?w=500&h=500&s=1" alt="Jaipur">
-            <div class="content">
-                <h2>Jaipur, Rajasthan</h2>
+<!-- ── DESTINATION CARDS ──────────────────────── -->
+<main class="dest-grid-section">
+    <div class="dest-grid">
 
-                <h3>Best Time to Visit</h3>
-                <p>October-March</p>
+        <!-- ── JAIPUR ── -->
+        <article class="dest-card" id="jaipur">
+            <div class="dest-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=700&q=80"
+                     alt="Hawa Mahal palace facade, Jaipur" loading="lazy">
+                <span class="dest-card__badge">Rajasthan</span>
+                <div class="dest-card__season">
+                    <i class="fas fa-sun"></i> Oct – Mar
+                </div>
+            </div>
+            <div class="dest-card__body">
+                <h2 class="dest-card__title">Jaipur</h2>
+                <p class="dest-card__tagline">The Pink City of Kings</p>
+                <p class="dest-card__desc">Jaipur dazzles with amber-stone forts on rocky hilltops, maharaja palaces converted into luxury hotels, and bazaars overflowing with textiles, gems and blue pottery. The old walled city turns golden at dusk — one of India's most photogenic hours.</p>
 
-                <h3>Top Attractions</h3>
-                <ul>
-                    <li>Amber Fort</li>
-                    <li>Hawa Mahal</li>
-                    <li>City Palace</li>
+                <ul class="dest-card__info">
+                    <li>
+                        <span class="info-label"><i class="fas fa-landmark"></i> Top Attractions</span>
+                        <span class="info-value">Amber Fort, Hawa Mahal, City Palace, Jantar Mantar</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-utensils"></i> Must Eat</span>
+                        <span class="info-value">Dal Baati Churma, Ghewar, Pyaaz Kachori, Laal Maas</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-suitcase"></i> Known For</span>
+                        <span class="info-value">Royal heritage, block-print textiles, camel safaris</span>
+                    </li>
                 </ul>
+                <a href="contact.html" class="dest-card__btn">
+                    Plan a Visit <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
 
-                <h3>Local Food to Try</h3>
-                <p>Dal Baati Churma, Ghewar</p>
+        <!-- ── GOA ── -->
+        <article class="dest-card" id="goa">
+            <div class="dest-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=700&q=80"
+                     alt="Palm-lined beach at sunset, Goa" loading="lazy">
+                <span class="dest-card__badge">Goa</span>
+                <div class="dest-card__season">
+                    <i class="fas fa-sun"></i> Nov – Feb
+                </div>
+            </div>
+            <div class="dest-card__body">
+                <h2 class="dest-card__title">Goa</h2>
+                <p class="dest-card__tagline">The Pearl of the Orient</p>
+                <p class="dest-card__desc">India's smallest state punches well above its weight — pristine beaches, Portuguese-era cathedrals, spice plantations and a laid-back coastal culture that is completely unlike anywhere else in the country. North Goa buzzes with energy; South Goa offers serenity.</p>
+
+                <ul class="dest-card__info">
+                    <li>
+                        <span class="info-label"><i class="fas fa-landmark"></i> Top Attractions</span>
+                        <span class="info-value">Baga & Palolem beaches, Basilica of Bom Jesus, Dudhsagar Falls</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-utensils"></i> Must Eat</span>
+                        <span class="info-value">Fish Curry Rice, Prawn Balchão, Bebinca, Feni</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-suitcase"></i> Known For</span>
+                        <span class="info-value">Beach parties, Portuguese churches, water sports</span>
+                    </li>
+                </ul>
+                <a href="contact.html" class="dest-card__btn">
+                    Plan a Visit <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- ── VARANASI ── -->
+        <article class="dest-card" id="varanasi">
+            <div class="dest-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1606298855672-3efb63017be8?w=700&q=80"
+                     alt="Evening Ganga Aarti on the ghats, Varanasi" loading="lazy">
+                <span class="dest-card__badge">Uttar Pradesh</span>
+                <div class="dest-card__season">
+                    <i class="fas fa-sun"></i> Oct – Mar
+                </div>
+            </div>
+            <div class="dest-card__body">
+                <h2 class="dest-card__title">Varanasi</h2>
+                <p class="dest-card__tagline">The City of Eternal Light</p>
+                <p class="dest-card__desc">One of the world's oldest continuously inhabited cities, Varanasi sits on the western bank of the sacred Ganga. Its 88 ghats are alive around the clock — with pilgrims bathing at dawn, cremation pyres burning through the night, and the thunderous evening Ganga Aarti that draws thousands.</p>
+
+                <ul class="dest-card__info">
+                    <li>
+                        <span class="info-label"><i class="fas fa-landmark"></i> Top Attractions</span>
+                        <span class="info-value">Dashashwamedh Ghat, Kashi Vishwanath Temple, Sarnath</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-utensils"></i> Must Eat</span>
+                        <span class="info-value">Kachori Sabzi, Banarasi Paan, Malaiyyo (winter), Lassi</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-suitcase"></i> Known For</span>
+                        <span class="info-value">Spiritual rituals, silk weaving, sunrise boat rides</span>
+                    </li>
+                </ul>
+                <a href="contact.html" class="dest-card__btn">
+                    Plan a Visit <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- ── KERALA ── -->
+        <article class="dest-card" id="kerala">
+            <div class="dest-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=700&q=80"
+                     alt="Houseboat on the backwaters, Kerala" loading="lazy">
+                <span class="dest-card__badge">Kerala</span>
+                <div class="dest-card__season">
+                    <i class="fas fa-sun"></i> Sep – Mar
+                </div>
+            </div>
+            <div class="dest-card__body">
+                <h2 class="dest-card__title">Kerala</h2>
+                <p class="dest-card__tagline">God's Own Country</p>
+                <p class="dest-card__desc">A green ribbon of land between the Western Ghats and the Arabian Sea, Kerala offers a rare combination of calm backwaters, mist-wrapped tea estates, Ayurvedic wellness traditions and a coastline dotted with fishing villages. Drifting on a kettuvallam houseboat is one of India's most serene experiences.</p>
+
+                <ul class="dest-card__info">
+                    <li>
+                        <span class="info-label"><i class="fas fa-landmark"></i> Top Attractions</span>
+                        <span class="info-value">Alleppey Backwaters, Munnar, Periyar, Kovalam Beach</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-utensils"></i> Must Eat</span>
+                        <span class="info-value">Appam with Stew, Kerala Sadya, Fish Molee, Banana Chips</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-suitcase"></i> Known For</span>
+                        <span class="info-value">Houseboat stays, Ayurveda retreats, Kathakali dance</span>
+                    </li>
+                </ul>
+                <a href="contact.html" class="dest-card__btn">
+                    Plan a Visit <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- ── RISHIKESH ── -->
+        <article class="dest-card" id="rishikesh">
+            <div class="dest-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=700&q=80"
+                     alt="Lakshman Jhula suspension bridge over the Ganga, Rishikesh" loading="lazy">
+                <span class="dest-card__badge">Uttarakhand</span>
+                <div class="dest-card__season">
+                    <i class="fas fa-sun"></i> Sep – Apr
+                </div>
+            </div>
+            <div class="dest-card__body">
+                <h2 class="dest-card__title">Rishikesh</h2>
+                <p class="dest-card__tagline">The Yoga Capital of the World</p>
+                <p class="dest-card__desc">Perched where the Ganga descends from the Himalayas into the plains, Rishikesh is simultaneously India's adventure-sports hub and a world-renowned centre for yoga and meditation. White-water rafting in the morning, evening aarti at dusk, and a silent ashram retreat — all within a few kilometres.</p>
+
+                <ul class="dest-card__info">
+                    <li>
+                        <span class="info-label"><i class="fas fa-landmark"></i> Top Attractions</span>
+                        <span class="info-value">Lakshman Jhula, Parmarth Niketan, Beatles Ashram</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-utensils"></i> Must Eat</span>
+                        <span class="info-value">Aloo Puri, Chotiwala Thali, Rhino Café pancakes</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-suitcase"></i> Known For</span>
+                        <span class="info-value">River rafting, yoga retreats, bungee jumping</span>
+                    </li>
+                </ul>
+                <a href="contact.html" class="dest-card__btn">
+                    Plan a Visit <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- ── LEH-LADAKH ── -->
+        <article class="dest-card" id="ladakh">
+            <div class="dest-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
+                     alt="Turquoise Pangong Lake framed by barren Himalayan peaks, Leh-Ladakh" loading="lazy">
+                <span class="dest-card__badge">Ladakh</span>
+                <div class="dest-card__season">
+                    <i class="fas fa-sun"></i> May – Sep
+                </div>
+            </div>
+            <div class="dest-card__body">
+                <h2 class="dest-card__title">Leh-Ladakh</h2>
+                <p class="dest-card__tagline">Where the Sky Meets the Earth</p>
+                <p class="dest-card__desc">At over 3,500 metres above sea level, Ladakh is India's high-altitude cold desert — a lunar landscape of rust-coloured mountains, turquoise lakes and ancient Tibetan-Buddhist monasteries clinging to cliffsides. The drive on the Manali–Leh Highway alone is one of the world's great road journeys.</p>
+
+                <ul class="dest-card__info">
+                    <li>
+                        <span class="info-label"><i class="fas fa-landmark"></i> Top Attractions</span>
+                        <span class="info-value">Pangong Lake, Nubra Valley, Hemis Monastery, Magnetic Hill</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-utensils"></i> Must Eat</span>
+                        <span class="info-value">Thukpa, Skyu, Momos, Butter Tea (Gur Gur Chai)</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-suitcase"></i> Known For</span>
+                        <span class="info-value">Bike expeditions, monastery festivals, stargazing</span>
+                    </li>
+                </ul>
+                <a href="contact.html" class="dest-card__btn">
+                    Plan a Visit <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- ── ANDAMAN ── -->
+        <article class="dest-card" id="andaman">
+            <div class="dest-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80"
+                     alt="Crystal-clear turquoise water and white sand beach, Andaman Islands" loading="lazy">
+                <span class="dest-card__badge">Andaman & Nicobar</span>
+                <div class="dest-card__season">
+                    <i class="fas fa-sun"></i> Oct – May
+                </div>
+            </div>
+            <div class="dest-card__body">
+                <h2 class="dest-card__title">Andaman &amp; Nicobar</h2>
+                <p class="dest-card__tagline">India's Tropical Island Paradise</p>
+                <p class="dest-card__desc">Six hundred kilometres off the eastern coast of mainland India, the Andaman Islands are a world apart — tropical rainforests, coral reefs teeming with marine life, bioluminescent beaches and a poignant colonial history told through the walls of the Cellular Jail. Radhanagar Beach consistently ranks among Asia's finest.</p>
+
+                <ul class="dest-card__info">
+                    <li>
+                        <span class="info-label"><i class="fas fa-landmark"></i> Top Attractions</span>
+                        <span class="info-value">Radhanagar Beach, Cellular Jail, Neil Island, Barren Island</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-utensils"></i> Must Eat</span>
+                        <span class="info-value">Grilled Lobster, Coconut Prawn Curry, Fish Tikka, Crab Masala</span>
+                    </li>
+                    <li>
+                        <span class="info-label"><i class="fas fa-suitcase"></i> Known For</span>
+                        <span class="info-value">Scuba diving, snorkelling, sea kayaking, bioluminescence</span>
+                    </li>
+                </ul>
+                <a href="contact.html" class="dest-card__btn">
+                    Plan a Visit <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+    </div><!-- /.dest-grid -->
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────── -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Incredible India Guide</h3>
+            <p>Explore the soul of India — culture, nature and adventure, one story at a time.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
-
-        <!-- Goa -->
-        <div class="card">
-            <img src="https://www.clubmahindra.com/blog/media/section_images/shuttersto-6d71496a31ac52b.jpg" alt="Goa">
-            <div class="content">
-                <h2>Goa</h2>
-
-                <h3>Best Time to Visit</h3>
-                <p>November-February</p>
-
-                <h3>Top Attractions</h3>
-                <ul>
-                    <li>Baga Beach</li>
-                    <li>Dudhsagar Waterfalls</li>
-                    <li>Basilica of Bom Jesus</li>
-                </ul>
-
-                <h3>Local Food to Try</h3>
-                <p>Goan Patal Bhaji, Bebinca</p>
-            </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="traveltip.html">Travel Tips</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
-
-        <!-- Varanasi -->
-        <div class="card">
-            <img src="https://wpblogassets.paytm.com/travelblog/uploads/2023/10/Best-Time-to-Visit-Varanasi-HERO-1.jpg" alt="Varanasi">
-            <div class="content">
-                <h2>Varanasi, Uttar Pradesh</h2>
-
-                <h3>Best Time to Visit</h3>
-                <p>October-March</p>
-
-                <h3>Top Attractions</h3>
-                <ul>
-                    <li>Kashi Vishwanath Temple</li>
-                    <li>Ganga Aarti at Dashashwamedh Ghat</li>
-                </ul>
-
-                <h3>Local Food to Try</h3>
-                <p>Kachori Sabzi, Malaiyyo</p>
-            </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p><i class="fas fa-envelope"></i> hello@incredibleindia.travel</p>
+            <p><i class="fas fa-globe"></i> India</p>
         </div>
-
-        <!-- Kerala -->
-        <div class="card">
-            <img src="https://assets.cntraveller.in/photos/65f445fc8411ed4511e9a4c9/master/pass/GettyImages-110051777.jpg" alt="Kerala">
-            <div class="content">
-                <h2>Kerala</h2>
-
-                <h3>Best Time to Visit</h3>
-                <p>September-March</p>
-
-                <h3>Top Attractions</h3>
-                <ul>
-                    <li>Alleppey Backwaters</li>
-                    <li>Munnar Tea Gardens</li>
-                    <li>Kovalam Beach</li>
-                </ul>
-
-                <h3>Local Food to Try</h3>
-                <p>Appam, Kerala Sadya</p>
-            </div>
-        </div>
-
-        <!-- Rishikesh -->
-        <div class="card">
-            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/laxman%20jhula-rishikesh-uttrakhand-hero?qlt=82&ts=1726646312953" alt="Rishikesh">
-            <div class="content">
-                <h2>Rishikesh</h2>
-
-                <h3>Best Time to Visit</h3>
-                <p>September-April</p>
-
-                <h3>Top Attractions</h3>
-                <ul>
-                    <li>Lakshman Jhula</li>
-                    <li>River Rafting</li>
-                    <li>Parmarth Niketan</li>
-                </ul>
-
-                <h3>Local Food to Try</h3>
-                <p>Aloo Puri, Chotiwala Special Thali</p>
-            </div>
-        </div>
-
-        <!-- Leh Ladakh -->
-        <div class="card">
-            <img src="https://media.assettype.com/outlooktraveller/2024-05/aa8055a9-7889-4c35-98e7-fa8305616a4a/shutterstock_754201888.jpeg?w=801&auto=format,compress&fit=max&format=webp&dpr=1.0" alt="Leh Ladakh">
-            <div class="content">
-                <h2>Leh-Ladakh</h2>
-
-                <h3>Best Time to Visit</h3>
-                <p>May-September</p>
-
-                <h3>Top Attractions</h3>
-                <ul>
-                    <li>Pangong Lake</li>
-                    <li>Nubra Valley</li>
-                    <li>Magnetic Hill</li>
-                </ul>
-
-                <h3>Local Food to Try</h3>
-                <p>Thukpa, Momos</p>
-            </div>
-        </div>
-
-        <!-- Andaman -->
-        <div class="card">
-            <img src="https://d26dp53kz39178.cloudfront.net/media/uploads/Location_Based_Travel_Guide_Images/image2_result-1659177543037.webp" alt="Andaman">
-            <div class="content">
-                <h2>Andaman & Nicobar</h2>
-
-                <h3>Best Time to Visit</h3>
-                <p>October-May</p>
-
-                <h3>Top Attractions</h3>
-                <ul>
-                    <li>Radhanagar Beach</li>
-                    <li>Cellular Jail</li>
-                    <li>Scuba Diving</li>
-                </ul>
-
-                <h3>Local Food to Try</h3>
-                <p>Seafood Curry, Coconut Prawn Curry</p>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-col"><h3>Incredible India Guide</h3><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div>
-    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="travel-tips.html">Travel Tips</a></li></ul></div>
-  </div>
-  <div class="footer-bottom">© 2025 Incredible India Travel Guide. All rights reserved.</div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Incredible India Travel Guide. All rights reserved.</p></div>
 </footer>
 
+<script>
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('main-nav');
+hamburger.addEventListener('click', function() {
+    const open = nav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+    hamburger.classList.toggle('active', open);
+});
+document.addEventListener('click', function(e) {
+    if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded','false');
+    }
+});
+</script>
 </body>
 </html>

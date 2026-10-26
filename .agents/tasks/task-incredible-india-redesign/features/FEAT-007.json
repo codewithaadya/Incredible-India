@@ -1,0 +1,24 @@
+{
+  "id": "FEAT-007",
+  "type": "docs",
+  "description": "Rewrite README.md fully and do a final asset/polish pass. README covers how to run it, project structure, how to add a destination (card on home → block on destination.html with matching id → jump link → image), how to change images (where they live, the onerror fallback, the SVG placeholder pattern), how to connect the contact form (set data-endpoint to a Formspree URL and what changes), the design system (palette, fonts), and the no-build constraint. Note the favicon.svg-only / no-PNG tradeoff. Optionally attempt favicon.png generation only if a rasterizer is already installed (none is, by default — do NOT install one).",
+  "status": "pending",
+  "steps": [
+    "Rewrite c:/Users/aadyagupta/Incredible-India/README.md fully with sections: Overview; How to run (open index.html, or `python -m http.server 8000` from the repo root); Project structure (list the five HTML pages, styles.css, per-page CSS, site.js/gallery.js/contact.js, assets/ SVG logo files, images/ SVGs); Design system (the palette tokens ivory/forest/saffron/terracotta/charcoal/sage/white and the Playfair Display + Inter fonts, loaded via Google Fonts); How to add a destination (add a card on index.html linking to destination.html#<newid>, add an <article id=\"<newid>\"> block on destination.html with best time/attractions/food, add a jump-link pill, add a local SVG image in images/); How to change images (edit the SVG files in images/, the onerror fallback swaps to images/placeholder.svg, the SVG placeholder pattern); How to connect the contact form (set the form's data-endpoint to a Formspree URL; contact.js will POST on submit and show success only on a real response); Constraints (plain HTML/CSS/vanilla JS, no build step, no frameworks, all assets local); Notes (favicon.svg only — a PNG could not be generated in this environment because no SVG rasterizer was installed; the logo wordmark uses SVG <text> with a local font-family stack as a documented tradeoff).",
+    "Optionally attempt favicon.png generation: check for magick/rsvg-convert/inkscape on PATH. If none is present (expected), skip and ensure every page's favicon link points to assets/favicon.svg (already done in the canonical head). Do NOT install any tooling and do NOT block on this.",
+    "Final asset pass: confirm no page references the old hotlinked logo JPG or the Font Awesome CDN; confirm every page favicon link is assets/favicon.svg; confirm no stray broken links remain (grep for 127.0.0.1, destinations.html, travel-tips.html, traveltips.html, raw.githubusercontent, i.redd.it, cloudfront, scene7, unsplash, openai.com, toiimg, cdnjs).",
+    "Set this FEAT's status to completed and record in findings any follow-up notes (e.g. favicon.png not generated, logo-text tradeoff documented in README)."
+  ],
+  "acceptance_criteria": [
+    "c:/Users/aadyagupta/Incredible-India/README.md is fully rewritten and includes the run, structure, add-destination, change-images, connect-form, design-system, and constraints sections plus the favicon/logo-text tradeoff notes.",
+    "No page references the Font Awesome CDN, 127.0.0.1, destinations.html, travel-tips.html, traveltips.html, raw.githubusercontent.com, i.redd.it, or the other hotlink domains listed.",
+    "favicon link on every page is assets/favicon.svg."
+  ],
+  "verification": [
+    "Read the rewritten README.md and confirm all required sections are present and accurate.",
+    "Run a grep across c:/Users/aadyagupta/Incredible-India for: `127.0.0.1`, `destinations.html`, `travel-tips.html`, `traveltips.html`, `raw.githubusercontent`, `i.redd.it`, `cdnjs`, `unsplash`, `images.openai.com`, `toiimg` — confirm there are zero matches in the HTML/CSS/JS files (the README may mention 127.0.0.1 only as a thing that was removed; that is fine but the source files must be clean).",
+    "Confirm every HTML page's favicon <link> points to assets/favicon.svg."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

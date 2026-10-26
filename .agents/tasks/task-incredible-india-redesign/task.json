@@ -1,0 +1,15 @@
+{
+  "task_id": "task-incredible-india-redesign",
+  "task_description": "Redesign the static Incredible India travel-guide site in place: shared design system (styles.css), self-contained SVG logo/favicon, shared site.js (mobile menu, reveals, image fallback), five redesigned pages (home, destinations, travel tips, gallery, contact) with local SVG images, accessible nav/footer, gallery lightbox, contact form validation, and a rewritten README. Plain HTML/CSS/vanilla JS only, no build step, all assets local.",
+  "status": "pending",
+  "feature_order": [
+    "FEAT-001",
+    "FEAT-002",
+    "FEAT-003",
+    "FEAT-004",
+    "FEAT-005",
+    "FEAT-006",
+    "FEAT-007"
+  ],
+  "blocked_reason": null
+}

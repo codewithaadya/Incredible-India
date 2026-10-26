@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="6" fill="#183D32"/>
+  <!-- arch -->
+  <path d="M5 27 Q5 11 16 8 Q27 11 27 27" fill="none" stroke="#E89B3C" stroke-width="2" stroke-linecap="round"/>
+  <line x1="5" y1="27" x2="5" y2="31" stroke="#E89B3C" stroke-width="2" stroke-linecap="round"/>
+  <line x1="27" y1="27" x2="27" y2="31" stroke="#E89B3C" stroke-width="2" stroke-linecap="round"/>
+  <!-- silhouette -->
+  <path d="M16 11 C13 13 11 16 10.5 19 C10 22 11 25 13.5 26.5 C14.5 27 15.3 27.5 16 27.8
+           C16.7 27.5 17.5 27 18.5 26.5 C21 25 22 22 21.5 19 C21 16 19 13 16 11 Z"
+        fill="#FAF7F0" stroke="#B9674D" stroke-width="0.8"/>
+  <!-- sun -->
+  <circle cx="16" cy="20" r="3" fill="#E89B3C"/>
+</svg>

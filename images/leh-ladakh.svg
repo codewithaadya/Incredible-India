@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1525"/>
+      <stop offset="100%" stop-color="#2a3a50"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g)"/>
+  <polygon points="0,400 80,120 180,400" fill="rgba(180,200,220,0.55)"/>
+  <polygon points="60,400 200,60 340,400" fill="rgba(200,215,235,0.7)"/>
+  <polygon points="260,400 400,90 520,400" fill="rgba(185,205,225,0.6)"/>
+  <polygon points="420,400 540,140 600,260 600,400" fill="rgba(195,210,232,0.5)"/>
+  <polygon points="200,60 182,100 218,100" fill="rgba(255,255,255,0.92)"/>
+  <polygon points="80,120 62,152 98,152" fill="rgba(255,255,255,0.85)"/>
+  <polygon points="400,90 382,125 418,125" fill="rgba(255,255,255,0.88)"/>
+  <!-- Lake Pangong -->
+  <ellipse cx="300" cy="330" rx="200" ry="35" fill="rgba(50,120,200,0.55)"/>
+  <!-- Monastery -->
+  <rect x="270" y="260" width="60" height="40" fill="rgba(200,160,100,0.85)"/>
+  <rect x="280" y="248" width="40" height="18" fill="rgba(180,140,80,0.85)"/>
+  <polygon points="300,238 278,252 322,252" fill="rgba(200,80,40,0.8)"/>
+  <text x="300" y="383" text-anchor="middle"
+        font-family="Georgia, serif" font-size="20" font-weight="700"
+        letter-spacing="0.1em" fill="rgba(255,255,255,0.95)">LEH-LADAKH</text>
+</svg>

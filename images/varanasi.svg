@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1010"/>
+      <stop offset="50%" stop-color="#2a1820"/>
+      <stop offset="100%" stop-color="#183D32"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g)"/>
+  <!-- Ganga -->
+  <rect x="0" y="300" width="600" height="100" fill="rgba(40,70,100,0.55)"/>
+  <!-- Reflection shimmer -->
+  <g stroke="rgba(232,155,60,0.25)" stroke-width="1" fill="none">
+    <path d="M200 310 Q230 305 260 312"/><path d="M320 320 Q360 313 400 322"/>
+    <path d="M150 330 Q200 323 250 330"/><path d="M380 330 Q420 322 460 330"/>
+  </g>
+  <!-- Ghats steps -->
+  <rect x="100" y="270" width="400" height="12" fill="rgba(180,150,100,0.75)"/>
+  <rect x="80" y="282" width="440" height="12" fill="rgba(170,140,90,0.8)"/>
+  <rect x="60" y="294" width="480" height="10" fill="rgba(160,130,80,0.85)"/>
+  <!-- Temples row -->
+  <g fill="rgba(180,90,40,0.9)">
+    <polygon points="180,160 168,265 192,265"/>
+    <rect x="160" y="265" width="40" height="12"/>
+    <polygon points="250,170 238,265 262,265"/>
+    <rect x="230" y="265" width="44" height="12"/>
+    <polygon points="300,145 286,265 314,265"/>
+    <rect x="276" y="265" width="48" height="12"/>
+    <polygon points="360,168 348,265 372,265"/>
+    <rect x="338" y="265" width="44" height="12"/>
+    <polygon points="420,162 408,265 432,265"/>
+    <rect x="400" y="265" width="40" height="12"/>
+  </g>
+  <!-- Aarti flames -->
+  <g opacity="0.85">
+    <ellipse cx="180" cy="268" rx="5" ry="9" fill="#E89B3C"/>
+    <ellipse cx="250" cy="268" rx="5" ry="9" fill="#E89B3C"/>
+    <ellipse cx="300" cy="268" rx="6" ry="11" fill="#FAF7F0"/>
+    <ellipse cx="360" cy="268" rx="5" ry="9" fill="#E89B3C"/>
+    <ellipse cx="420" cy="268" rx="5" ry="9" fill="#E89B3C"/>
+  </g>
+  <!-- Stars -->
+  <g fill="rgba(255,255,255,0.5)">
+    <circle cx="80" cy="60" r="1.2"/><circle cx="200" cy="40" r="1"/><circle cx="350" cy="55" r="1.3"/>
+    <circle cx="480" cy="35" r="1"/><circle cx="550" cy="70" r="1.2"/>
+  </g>
+  <text x="300" y="360" text-anchor="middle"
+        font-family="Georgia, serif" font-size="22" font-weight="700"
+        letter-spacing="0.1em" fill="rgba(255,255,255,0.95)">VARANASI</text>
+  <text x="300" y="386" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="12" letter-spacing="0.15em"
+        fill="rgba(255,255,255,0.6)">CITY OF MOKSHA</text>
+</svg>

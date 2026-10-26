@@ -1,0 +1,38 @@
+{
+  "id": "FEAT-002",
+  "type": "feat",
+  "description": "Rewrite the Home page (index.html + index.css) onto the FEAT-001 foundation. Full-width hero with dark overlay; H1 'India: A Journey Through a Thousand Stories' + supporting line + two buttons 'Explore Destinations' (→ destination.html) and 'Plan Your Journey' (→ contact.html) using RELATIVE paths (fix the 127.0.0.1:5500 buttons). Short intro paragraph. Six destination cards (Rajasthan, Kerala, Himachal Pradesh, Uttarakhand, Goa, Varanasi) each linking to destination.html#<id> with accurate one-line teasers. A 'Journeys' section REPLACING the fake testimonials — clearly labelled journey ideas (Golden Triangle, Backwaters & Spice Coasts, Himalayan Trails, Spiritual Rivers) as inspirations, NOT real quotes. A closing CTA. Remove the fake phone number and all fake testimonials. Create the six local destination card SVG images.",
+  "status": "pending",
+  "steps": [
+    "Create six local destination images in c:/Users/aadyagupta/Incredible-India/images/ following the placeholder pattern from FEAT-001 findings: rajasthan.svg, kerala.svg, himachal-pradesh.svg, uttarakhand.svg, goa.svg, varanasi.svg. Each = on-brand gradient + subtle pattern + the destination name as <text>. No external references.",
+    "Rewrite c:/Users/aadyagupta/Incredible-India/index.html. Replace <head> with the canonical head block from FEAT-001 findings (title 'Incredible India — A Travel Guide to India's Destinations & Tips', a unique meta description, preconnect + Google Fonts, favicon link, styles.css + index.css, the inline `.js` script). Keep lang='en'.",
+    "Add the skip link (`<a class=\"skip-link\" href=\"#main\">Skip to content</a>`) as the first focusable element, then the canonical header from FEAT-001 findings with `aria-current=\"page\"` on the Home link. Wrap page content in `<main id=\"main\">`. Add the canonical footer (no phone number). Add `<script src=\"site.js\" defer></script>` before </body>.",
+    "Build the hero: a full-width section using images/hero.svg as a background (or an <img> with object-fit:cover) with a dark overlay (forest gradient, ~55% opacity); H1 'India: A Journey Through a Thousand Stories'; a supporting line; two buttons 'Explore Destinations' (href=\"destination.html\", class btn btn--primary) and 'Plan Your Journey' (href=\"contact.html\", class btn btn--secondary). Use RELATIVE paths only — never 127.0.0.1.",
+    "Add a short intro paragraph (a `.container--narrow` section) describing India as a travel destination.",
+    "Add the six destination cards in a responsive grid (CSS grid auto-fit minmax 280px 1fr). Each card: an <img> (the local SVG, width/height set, loading='lazy', meaningful alt), an <h3> with the destination name, a one-line accurate teaser, and a link 'Explore' to destination.html#rajasthan / #kerala / #himachal-pradesh / #uttarakhand / #goa / #varanasi. Add `.reveal` with stagger to the grid container.",
+    "Add the 'Journeys' section REPLACING the fake testimonials: a heading 'Journey Ideas' and a short note that these are inspirations to plan around (NOT customer quotes). Four journey idea cards: Golden Triangle, Backwaters & Spice Coasts, Himalayan Trails, Spiritual Rivers — each a short inspiration blurb (no invented prices/dates). Clearly labelled as ideas.",
+    "Add a closing CTA section (no parallax): a forest/saffron band with a short line and a button to contact.html.",
+    "Rewrite c:/Users/aadyagupta/Incredible-India/index.css for page-specific layout only (hero, intro, destination-card grid, journeys grid, CTA band). Reuse tokens/classes from styles.css; do not redeclare the palette or header/footer (those live in styles.css). Ensure the hero image does not cause horizontal overflow and buttons wrap on narrow screens.",
+    "Remove all Font Awesome <link> and <i class='fas...'> markup. Remove the hotlinked raw.githubusercontent.com logo (use the canonical header logo instead).",
+    "Set FEAT-001 status to completed is not your job; set THIS FEAT's status to completed when done and record in findings the exact destination ids used (so FEAT-003 matches) and any index.css class names later pages should reuse."
+  ],
+  "acceptance_criteria": [
+    "index.html links styles.css AND index.css (styles.css first), has the inline `.js` script in <head>, a unique title + meta description, favicon link, lang='en', and a skip link as the first focusable element.",
+    "The header/footer/logo markup matches the FEAT-001 canonical block exactly; aria-current=\"page\" is on the Home link only.",
+    "H1 is exactly 'India: A Journey Through a Thousand Stories'; the two hero buttons link to destination.html and contact.html with RELATIVE paths (no 127.0.0.1).",
+    "Six destination cards exist, each linking to destination.html#rajasthan/#kerala/#himachal-pradesh/#uttarakhand/#goa/#varanasi respectively, using LOCAL images (no hotlinks).",
+    "The fake testimonials and fake phone number are gone; a 'Journeys' section presents four journey ideas clearly labelled as inspirations (not real quotes).",
+    "All <img> have width, height, loading='lazy' (hero is eager) and meaningful alt; the hotlinked logo is gone.",
+    "No Font Awesome CDN link remains; no external image URLs remain.",
+    "index.css contains only page-specific layout (no palette/header/footer redeclaration)."
+  ],
+  "verification": [
+    "`node --check c:/Users/aadyagupta/Incredible-India/site.js` still passes (unchanged).",
+    "`python -m http.server 8000`; open http://localhost:8000/index.html — no 404s for styles.css, index.css, site.js, assets/logo-dark.svg, assets/favicon.svg, images/hero.svg and the six destination SVGs.",
+    "Click each destination card link — it navigates to destination.html#<id> (the ids will exist after FEAT-003; a 404 on destination.html itself must NOT happen since the file already exists).",
+    "Disable JS in the browser — nav links remain visible, all content (cards, journeys) is visible, hero buttons still work.",
+    "Resize from 360px to 1920px — no horizontal scrollbar appears."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

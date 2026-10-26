@@ -1,151 +1,294 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Gallery - Incredible India</title>
-    <link rel="stylesheet" href="gallery.css">
+    <title>Gallery — Incredible India</title>
+    <meta name="description" content="A visual journey through India's most stunning landscapes, temples and natural wonders.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
 
- <body>
-
-    <!-- Navbar -->
-    <header>
-        <div class="navbar">
-
-            <h1>Incredible India</h1>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="destinations.html">Destinations</a></li>
-                    <li><a href="traveltips.html">Travel Tips</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <i class="fas fa-map-marked-alt logo-icon"></i>
+            <span class="logo-text">Incredible India</span>
         </div>
-    </header>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="traveltip.html">Travel Tips</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- content Section -->
-    <section class="content">
+<!-- Page Hero -->
+<section class="gallery-hero">
+    <div class="gallery-hero__overlay"></div>
+    <div class="gallery-hero__content">
+        <h1>A Visual Journey Through India</h1>
+        <p>India's most stunning landscapes, sacred spaces and natural wonders</p>
+    </div>
+</section>
 
-        <div class="content-container">
+<!-- Filter Buttons -->
+<div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="mountains">Mountains</button>
+    <button class="filter-btn" data-filter="water">Water</button>
+    <button class="filter-btn" data-filter="heritage">Heritage</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+</div>
 
-            <h2>A Visual Journey Through India</h2>
+<!-- Gallery Grid -->
+<section class="gallery-container">
 
-            <p>
-                A visual journey through India's most stunning places!
-            </p>
-
+    <div class="gallery-card" data-category="nature mountains">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Valley of Flowers, Uttarakhand" loading="lazy">
+        <div class="caption">
+            <h3>Valley of Flowers, Uttarakhand</h3>
+            <p>A UNESCO World Heritage meadow carpeted in wildflowers during monsoon season.</p>
+            <span>"Blooming Paradise in the Himalayas"</span>
         </div>
+    </div>
 
-    </section>
+    <div class="gallery-card" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1531804055935-76f44d7c3621?w=800&q=80" alt="Rann of Kutch, Gujarat" loading="lazy">
+        <div class="caption">
+            <h3>Rann of Kutch, Gujarat</h3>
+            <p>The vast white salt desert glowing under the full moon — a surreal Indian spectacle.</p>
+            <span>"Moonlit Rann of Kutch"</span>
+        </div>
+    </div>
 
-    <!-- Gallery Section -->
-    <section class="gallery-container">
+    <div class="gallery-card" data-category="water nature">
+        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80" alt="Loktak Lake, Manipur" loading="lazy">
+        <div class="caption">
+            <h3>Loktak Lake, Manipur</h3>
+            <p>Unique floating phumdis (reed islands) on India's largest freshwater lake.</p>
+            <span>"Floating Wonders of Manipur"</span>
+        </div>
+    </div>
 
-        <!-- Valley of Flowers -->
-        <div class="gallery-card">
+    <div class="gallery-card" data-category="heritage mountains">
+        <img src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?w=800&q=80" alt="Tawang Monastery, Arunachal Pradesh" loading="lazy">
+        <div class="caption">
+            <h3>Tawang Monastery, Arunachal Pradesh</h3>
+            <p>India's largest Buddhist monastery perched high in the mountains.</p>
+            <span>"Peace Above the Clouds"</span>
+        </div>
+    </div>
 
-            <img src="https://hellohikers.in/wp-content/uploads/2025/04/valley-of-flowers-trek-in-monsoon.png" alt="Valley of Flowers">
+    <div class="gallery-card" data-category="water nature">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80" alt="Dudhsagar Waterfalls, Goa" loading="lazy">
+        <div class="caption">
+            <h3>Dudhsagar Waterfalls, Goa</h3>
+            <p>A spectacular multi-tiered waterfall on the Goa-Karnataka border.</p>
+            <span>"The Sea of Milk Waterfall"</span>
+        </div>
+    </div>
 
-            <div class="caption">
-                <h3>Valley of Flowers, Uttarakhand</h3>
+    <div class="gallery-card" data-category="mountains heritage">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Spiti Valley, Himachal Pradesh" loading="lazy">
+        <div class="caption">
+            <h3>Spiti Valley, Himachal Pradesh</h3>
+            <p>A breathtaking cold desert with ancient monasteries and dramatic landscapes.</p>
+            <span>"Misty Mornings in Spiti"</span>
+        </div>
+    </div>
 
-                <p>A stunning meadow of colorful wildflowers.</p>
+    <div class="gallery-card" data-category="heritage">
+        <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800&q=80" alt="Hawa Mahal, Jaipur" loading="lazy">
+        <div class="caption">
+            <h3>Hawa Mahal, Jaipur</h3>
+            <p>The iconic Palace of Winds — 953 small windows built for the royal ladies to observe street life.</p>
+            <span>"The Pink City's Crown"</span>
+        </div>
+    </div>
 
-                <span>"Blooming Paradise in the Himalayas"</span>
+    <div class="gallery-card" data-category="water mountains">
+        <img src="https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=800&q=80" alt="Rishikesh, Uttarakhand" loading="lazy">
+        <div class="caption">
+            <h3>Rishikesh, Uttarakhand</h3>
+            <p>The yoga capital of the world, nestled in the foothills of the Himalayas.</p>
+            <span>"Gateway to the Himalayas"</span>
+        </div>
+    </div>
+
+    <div class="gallery-card" data-category="heritage water">
+        <img src="https://images.unsplash.com/photo-1606298855672-3efb63017be8?w=800&q=80" alt="Varanasi Ghats" loading="lazy">
+        <div class="caption">
+            <h3>Varanasi Ghats, Uttar Pradesh</h3>
+            <p>The ancient steps descending to the sacred Ganga — a timeless spiritual spectacle.</p>
+            <span>"City of Eternal Light"</span>
+        </div>
+    </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lb-close" aria-label="Close lightbox">
+        <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox__arrow lightbox__prev" id="lb-prev" aria-label="Previous image">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <div class="lightbox__content">
+        <img id="lb-img" src="" alt="" class="lightbox__img">
+        <p id="lb-caption" class="lightbox__caption"></p>
+    </div>
+    <button class="lightbox__arrow lightbox__next" id="lb-next" aria-label="Next image">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div>
+<div class="lightbox-backdrop" id="lb-backdrop"></div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Incredible India Guide</h3>
+            <p>Explore the soul of India — culture, nature and adventure, one story at a time.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
-
         </div>
-
-        <!-- Rann of Kutch -->
-        <div class="gallery-card">
-
-            <img src="https://production-nuego-cms.blr1.digitaloceanspaces.com/static-contents/prod-v1/Kala_Dungar_shutterstock_2431204099_750_X_450_px_f2c7ae6a3f.jpg" alt="Rann of Kutch">
-
-            <div class="caption">
-                <h3>Rann of Kutch, Gujarat</h3>
-
-                <p>The vast white salt desert glowing under the full moon.</p>
-
-                <span>"Moonlit Rann of Kutch"</span>
-            </div>
-
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="traveltip.html">Travel Tips</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
-
-        <!-- Loktak Lake -->
-        <div class="gallery-card">
-
-            <img src="https://i0.wp.com/histravelinstincts.com/wp-content/uploads/2020/09/Loktak-Lake-Manipur.jpg?fit=1024%2C768&ssl=1" alt="Loktak Lake">
-
-            <div class="caption">
-                <h3>Loktak Lake, Manipur</h3>
-
-                <p>Unique floating islands on a freshwater lake.</p>
-
-                <span>"Floating Wonders of Manipur"</span>
-            </div>
-
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p><i class="fas fa-envelope"></i> hello@incredibleindia.travel</p>
+            <p><i class="fas fa-globe"></i> India</p>
         </div>
-
-        <!-- Tawang Monastery -->
-        <div class="gallery-card">
-
-            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/tawang-monastery-tawang-arunachal-pradesh-1-attr-hero?qlt=82&ts=1742169936069" alt="Tawang Monastery">
-
-            <div class="caption">
-                <h3>Tawang Monastery, Arunachal Pradesh</h3>
-
-                <p>India’s largest Buddhist monastery in the mountains.</p>
-
-                <span>"Peace Above the Clouds"</span>
-            </div>
-
-        </div>
-
-        <!-- Dudhsagar -->
-        <div class="gallery-card">
-
-            <img src="https://t4.ftcdn.net/jpg/03/13/40/17/360_F_313401752_ZKXJGMnZR4ZSwwfN73YztrVtmk4uz4ZO.jpg" alt="Dudhsagar Waterfalls">
-
-            <div class="caption">
-                <h3>Dudhsagar Waterfalls</h3>
-
-                <p>A spectacular multi-tiered waterfall on the Goa-Karnataka border.</p>
-
-                <span>"The Sea of Milk Waterfall"</span>
-            </div>
-
-        </div>
-
-        <!-- Spiti Valley -->
-        <div class="gallery-card">
-
-            <img src="https://media.assettype.com/outlooktraveller/2024-06/3fc9b042-8a08-4bdc-8575-d8d80350e6fd/shutterstock_1773424715.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100" alt="Spiti Valley">
-
-            <div class="caption">
-                <h3>Spiti Valley, Himachal Pradesh</h3>
-
-                <p>A breathtaking cold desert with ancient monasteries.</p>
-
-                <span>"Misty Mornings in Spiti"</span>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-col"><h3>Incredible India Guide</h3><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div>
-  </div>
-  <div class="footer-bottom">© 2025 All rights reserved.</div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Incredible India Travel Guide. All rights reserved.</p></div>
 </footer>
 
+<script>
+// ── HAMBURGER ────────────────────────────────────
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('main-nav');
+hamburger.addEventListener('click', function() {
+    const open = nav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+    hamburger.classList.toggle('active', open);
+});
+document.addEventListener('click', function(e) {
+    if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded','false');
+    }
+});
+
+// ── FILTERS ──────────────────────────────────────
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = Array.from(document.querySelectorAll('.gallery-card'));
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+            const cats = card.dataset.category || '';
+            card.style.display = (filter === 'all' || cats.includes(filter)) ? '' : 'none';
+        });
+    });
+});
+
+// ── LIGHTBOX ─────────────────────────────────────
+const lightbox  = document.getElementById('lightbox');
+const backdrop  = document.getElementById('lb-backdrop');
+const lbImg     = document.getElementById('lb-img');
+const lbCaption = document.getElementById('lb-caption');
+const lbClose   = document.getElementById('lb-close');
+const lbPrev    = document.getElementById('lb-prev');
+const lbNext    = document.getElementById('lb-next');
+
+let currentIndex = 0;
+let visibleCards = [];
+
+function getVisible() {
+    return cards.filter(c => c.style.display !== 'none');
+}
+
+function openLightbox(index) {
+    visibleCards = getVisible();
+    currentIndex = index;
+    loadSlide(currentIndex);
+    lightbox.classList.add('open');
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('open');
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+function loadSlide(idx) {
+    const card = visibleCards[idx];
+    const img  = card.querySelector('img');
+    const cap  = card.querySelector('h3');
+    lbImg.src     = img.src;
+    lbImg.alt     = img.alt;
+    lbCaption.textContent = cap ? cap.textContent : '';
+}
+
+function prev() {
+    currentIndex = (currentIndex - 1 + visibleCards.length) % visibleCards.length;
+    loadSlide(currentIndex);
+}
+
+function next() {
+    currentIndex = (currentIndex + 1) % visibleCards.length;
+    loadSlide(currentIndex);
+}
+
+// Open on card click
+cards.forEach((card, i) => {
+    card.addEventListener('click', () => openLightbox(getVisible().indexOf(card)));
+    card.style.cursor = 'pointer';
+});
+
+lbClose.addEventListener('click', closeLightbox);
+backdrop.addEventListener('click', closeLightbox);
+lbPrev.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
+lbNext.addEventListener('click', (e) => { e.stopPropagation(); next(); });
+
+document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape')       closeLightbox();
+    if (e.key === 'ArrowLeft')    prev();
+    if (e.key === 'ArrowRight')   next();
+});
+</script>
 </body>
 </html>

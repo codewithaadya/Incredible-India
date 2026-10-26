@@ -1,0 +1,34 @@
+{
+  "id": "FEAT-006",
+  "type": "feat",
+  "description": "Rewrite the Contact page (contact.html + contact.css + contact.js) onto the FEAT-001 foundation. Labelled fields (name, email, subject, message) each with a real <label for>; inline validation on submit and on blur with messages near fields (aria-invalid, aria-describedby). The form has NO backend — put data-endpoint on the <form> (placeholder Formspree URL) and show an honest 'not connected yet' notice. Do NOT show a success message unless a real submission actually succeeds (default with no real endpoint: keep the notice, never fake success). Fix the malformed footer (stray </div>). Create the contact hero image.",
+  "status": "pending",
+  "steps": [
+    "Create c:/Users/aadyagupta/Incredible-India/images/contact-hero.svg following the placeholder pattern (on-brand gradient + subtle pattern + 'Incredible India' watermark). No external references.",
+    "Rewrite c:/Users/aadyagupta/Incredible-India/contact.html. Replace <head> with the canonical head block (title 'Contact — Incredible India', unique meta description, fonts, favicon, styles.css + contact.css, inline `.js` script). Add the skip link, canonical header (aria-current=\"page\" on Contact), <main id=\"main\">, canonical footer (fix the stray </div> malformed footer), <script src=\"site.js\" defer></script> then <script src=\"contact.js\" defer></script>. Match the header/footer/logo byte-identically to the other pages.",
+    "Add a short hero/intro heading (one h1 'Contact Us') + supporting line over the local contact-hero.svg with a dark overlay (reuse the hero pattern).",
+    "Build the contact form: `<form id=\"contact-form\" data-endpoint=\"https://formspree.io/f/your-id\" novalidate>`. Fields, each with a real <label for> + matching id + an inline error message element (e.g. <p id=\"name-error\" class=\"field-error\">): name (text, required, minlength 2), email (email, required, pattern), subject (text, required, minlength 3), message (textarea, required, minlength 10). Each input references its error via aria-describedby=\"<id>-error\"; validation toggles aria-invalid=\"true/false\" and shows/hides the error text. Include a submit button.",
+    "Add an honest 'not connected yet' notice near the form (e.g. `<p class=\"form-notice\" role=\"status\">This form is not connected to a backend yet — your message will not be sent. See the README to connect it.</p>`) visible by default. Add a status region (role=\"status\"/aria-live) for submit outcomes.",
+    "Create c:/Users/aadyagupta/Incredible-India/contact.js (vanilla, defer-safe). (a) Validation: on submit and on blur of each field, validate (name required min 2; email required + valid email regex; subject required min 3; message required min 10). Show the per-field error message, set aria-invalid and aria-describedby. On invalid submit, focus the first invalid field and prevent submission. (b) Submit handling: if all valid, check the form's data-endpoint — if it is the placeholder ('https://formspree.io/f/your-id') or empty, do NOT fake success: keep/reshow the 'not connected yet' notice and set the status region to a clear non-success message (e.g. 'Form not connected — no message was sent.'). Do NOT navigate or show a success message. If a real endpoint is configured (changed from the placeholder), attempt a fetch POST (JSON); only on a real successful response show a success message and reset the form; on failure show an error message. Never fake success.",
+    "Rewrite c:/Users/aadyagupta/Incredible-India/contact.css for page-specific layout only (hero, form layout with labels above inputs, error styling, notice styling, info card). Reuse tokens from styles.css. Ensure the form is usable and no horizontal overflow 360px–1920px.",
+    "Remove all Font Awesome markup, the hotlinked Unsplash hero image, and the fake social links markup as needed (replace with the canonical footer; no phone numbers)."
+  ],
+  "acceptance_criteria": [
+    "contact.html has the canonical head (unique title + meta description, fonts, favicon, styles.css + contact.css, inline .js script), skip link, canonical header (aria-current on Contact), <main id=\"main\">, canonical footer (the malformed stray </div> is fixed), site.js + contact.js deferred — matching the other pages.",
+    "The form has data-endpoint=\"https://formspree.io/f/your-id\", real <label for> for each of name/email/subject/message, per-field error elements, aria-invalid toggling, and aria-describedby wiring.",
+    "Validation runs on submit and on blur; invalid submit is prevented and the first invalid field is focused.",
+    "With the default placeholder endpoint, submitting a valid form does NOT show a success message — it shows/keeps the 'not connected yet' notice and a non-success status message.",
+    "An honest 'not connected yet' notice is visible near the form by default.",
+    "No hotlinked images; no phone numbers; the contact hero is local SVG.",
+    "`node --check c:/Users/aadyagupta/Incredible-India/contact.js` passes (exit 0)."
+  ],
+  "verification": [
+    "`node --check c:/Users/aadyagupta/Incredible-India/contact.js` exits 0.",
+    "`python -m http.server 8000`; open http://localhost:8000/contact.html — submit empty → required errors appear and submission is blocked; blur a field → its error updates; fill valid data and submit → the 'not connected yet' notice / a non-success status shows (NO success message).",
+    "Inspect the <form> element → data-endpoint is present and equals the placeholder Formspree URL.",
+    "No 404s for contact.css, contact.js, or images/contact-hero.svg; no external image URLs remain.",
+    "Resize 360px–1920px — no horizontal overflow; the footer is well-formed (no stray </div>)."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

@@ -1,0 +1,32 @@
+{
+  "id": "FEAT-003",
+  "type": "feat",
+  "description": "Rewrite the Destinations page (destination.html + destination.css) onto the FEAT-001 foundation. Add a jump-link row at the top (in-page anchors to the six destinations). Render the six destinations (Rajasthan, Kerala, Himachal Pradesh, Uttarakhand, Goa, Varanasi) with editorial alternating image/text layouts, each with the FIXED id (rajasthan, kerala, himachal-pradesh, uttarakhand, goa, varanasi) so the homepage cards deep-link correctly; each shows best time to visit, top attractions, local food (accurate; no invented hours/prices). Add a 'More to explore' row (Leh-Ladakh, Andaman & Nicobar, Mysore) as smaller teaser cards (no deep links required). Reuse the six destination SVG images created in FEAT-002; create the three more-to-explore SVGs.",
+  "status": "pending",
+  "steps": [
+    "Create three more-to-explore images in c:/Users/aadyagupta/Incredible-India/images/ following the placeholder pattern: leh-ladakh.svg, andaman-nicobar.svg, mysore.svg. No external references.",
+    "Rewrite c:/Users/aadyagupta/Incredible-India/destination.html. Replace <head> with the canonical head block (title 'Destinations — Incredible India', unique meta description, fonts, favicon, styles.css + destination.css, inline `.js` script). Add the skip link, the canonical header (aria-current=\"page\" on the Destinations link), <main id=\"main\">, canonical footer, and <script src=\"site.js\" defer></script>. Match the header/footer/logo byte-identically to FEAT-002's index.html.",
+    "Add a page intro heading (one h1, e.g. 'Explore the Heart of India') + a short supporting paragraph.",
+    "Add a jump-link row (a nav of anchor links to #rajasthan, #kerala, #himachal-pradesh, #uttarakhand, #goa, #varanasi) styled as pills; it can wrap on mobile.",
+    "For each of the six destinations, render an <article id=\"<id>\"> with an editorial alternating layout: image on one side, text on the other; alternate the side per row (odd image-left, even image-right via CSS). Include an <h2> name, a 'Best time to visit' line, a 'Top attractions' <ul>, and a 'Local food' line — accurate, no invented hours/prices. Use the matching local SVG (images/rajasthan.svg etc. from FEAT-002) with width/height/loading='lazy'/alt. Add `.reveal` to each article.",
+    "Add the 'More to explore' row: three smaller teaser cards (Leh-Ladakh, Andaman & Nicobar, Mysore) each with the local SVG image, name, and a one-line teaser. No deep links required.",
+    "Rewrite c:/Users/aadyagupta/Incredible-India/destination.css for page-specific layout only (jump-link pills, alternating article layout, more-to-explore grid). Reuse tokens from styles.css. Make the alternating layout collapse to a single stacked column on mobile and never cause horizontal overflow.",
+    "Remove all Font Awesome and hotlinked images (the old destination.html hotlinks tripadvisor/clubmahindra/paytm/cntraveller/scene7/outlooktraveller/cloudfront). Remove the broken footer links to destinations.html / travel-tips.html."
+  ],
+  "acceptance_criteria": [
+    "destination.html has the canonical head (unique title + meta description, fonts, favicon, styles.css + destination.css, inline .js script), skip link, canonical header (aria-current on Destinations), <main id=\"main\">, canonical footer, and site.js deferred — matching FEAT-002 exactly except aria-current.",
+    "Six <article> blocks exist with ids exactly: rajasthan, kerala, himachal-pradesh, uttarakhand, goa, varanasi.",
+    "Each article has best time to visit, top attractions (list), and local food — accurate, no invented hours/prices.",
+    "All images are local SVGs (the six from FEAT-002 + the three new); no hotlinks remain; every <img> has width/height/loading='lazy'/alt.",
+    "A jump-link row at the top links to the six ids.",
+    "No Font Awesome link, no broken footer links (destinations.html/travel-tips.html gone)."
+  ],
+  "verification": [
+    "`python -m http.server 8000`; open http://localhost:8000/index.html and click each of the six destination cards — each lands on destination.html#<id> and scrolls to the correct article (confirm the ids match: rajasthan, kerala, himachal-pradesh, uttarakhand, goa, varanasi).",
+    "Open http://localhost:8000/destination.html directly — jump-link pills scroll to each section; the alternating layout stacks on a 360px-wide viewport with no horizontal overflow.",
+    "No 404s for destination.css or any image; no external image URLs remain.",
+    "Disable JS — all content visible, jump links work."
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

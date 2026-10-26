@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a4060"/>
+      <stop offset="100%" stop-color="#2d7090"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e6080"/>
+      <stop offset="100%" stop-color="#0f3050"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#sky)"/>
+  <!-- Sea -->
+  <rect x="0" y="280" width="600" height="120" fill="url(#sea)"/>
+  <!-- Wave lines -->
+  <g stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none">
+    <path d="M0 300 Q50 295 100 302 Q150 308 200 300 Q250 292 300 300 Q350 308 400 300 Q450 292 500 300 Q550 308 600 300"/>
+    <path d="M0 320 Q60 314 120 322 Q180 330 240 320 Q300 310 360 320 Q420 330 480 320 Q540 310 600 320"/>
+  </g>
+  <!-- Sandy beach -->
+  <path d="M0 280 Q150 265 300 272 Q450 278 600 268 L600 295 L0 295 Z" fill="rgba(210,180,120,0.7)"/>
+  <!-- Sun setting -->
+  <circle cx="490" cy="160" r="38" fill="#E89B3C" opacity="0.75"/>
+  <!-- Palm trees -->
+  <g>
+    <line x1="120" y1="380" x2="110" y2="215" stroke="rgba(60,35,10,0.9)" stroke-width="9"/>
+    <path d="M110 215 Q85 195 62 205 Q85 212 110 215" fill="rgba(30,100,40,0.9)"/>
+    <path d="M110 220 Q135 195 160 205 Q135 218 110 220" fill="rgba(30,100,40,0.9)"/>
+    <path d="M110 223 Q82 212 78 232 Q95 223 110 223" fill="rgba(30,100,40,0.9)"/>
+  </g>
+  <!-- Beach umbrella -->
+  <line x1="380" y1="320" x2="375" y2="265" stroke="rgba(180,100,50,0.8)" stroke-width="3"/>
+  <path d="M350 268 Q375 248 400 268 Z" fill="rgba(220,50,50,0.7)"/>
+  <path d="M350 268 Q375 260 400 268 Z" fill="rgba(240,200,50,0.7)"/>
+  <text x="300" y="360" text-anchor="middle"
+        font-family="Georgia, serif" font-size="24" font-weight="700"
+        letter-spacing="0.1em" fill="rgba(255,255,255,0.95)">GOA</text>
+  <text x="300" y="386" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="12" letter-spacing="0.15em"
+        fill="rgba(255,255,255,0.6)">PEARL OF THE ORIENT</text>
+</svg>
